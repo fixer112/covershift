@@ -182,7 +182,8 @@ label.control-label {
 .client img {
    /* height: 150px;*/
     /*width: 200px;*/
-    width: 90%;
+    height: 80%;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -192,4 +193,13 @@ label.control-label {
 }
 .clients{
     background-color:#090935e6;
+}
+.title {
+    text-align: center;
+    font-weight: bold;
+
+}
+.sub-title {
+    font-weight: bold;
+
 }

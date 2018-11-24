@@ -78,7 +78,7 @@
 @yield('script')
 <div class="row clients">
     <div class="col-12 mx-auto">
-      <h2 style="text-align: center;font-weight: bold;color:white;margin-bottom: 20px;">Trusted By</h2>  
+      <h2 style="text-align: center;font-weight: bold;color:white;margin-bottom: 20px;margin-top: 20px;">Trusted By</h2>  
   </div>
   <div class="col-12">
     <div class="row">
@@ -124,8 +124,8 @@
 
     </div>
     <div class="terms">
-        <span><a href="">Terms</a></span>
-        <span><a href="">Privacy</a></span>
+        <span><a href="/terms">Terms</a></span>
+        <span><a href="/privacy">Privacy</a></span>
     </div>
     
 </div>

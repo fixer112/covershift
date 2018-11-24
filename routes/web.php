@@ -19,6 +19,22 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/hire', function () {
+    return view('hire');
+});
+
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+
+Route::get('/terms', function () {
+    return view('terms');
+});
+
 Route::get('/alert', function () {
     return view('alert');
 });
