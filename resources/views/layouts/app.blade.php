@@ -25,7 +25,7 @@
 <body>
     <header id="header" class="">
         <div>
-            <img src="{{ asset('/covershift.jpeg')}}" alt="" width="100%" height="100%">
+            <img src="{{ asset('/images/covershift.jpeg')}}" alt="" width="100%" height="100%">
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,16 +37,16 @@
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
 
               <li class="nav-item menu-link">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="{{url('/')}}">Home</a>
             </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="/hire">Hire Full Time Staff </a>
+                <a class="nav-link" href="{{url('/hire')}}">Hire Full Time Staff </a>
             </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="/about">About Us</a>
+                <a class="nav-link" href="{{url('/about')}}">About Us</a>
             </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="/contact">Contact </a>
+                <a class="nav-link" href="{{url('/contact')}}">Contact </a>
             </li>
             
       {{-- <li class="nav-item">
@@ -83,30 +83,30 @@
   <div class="col-12">
     <div class="row">
         <div class="col-3 client">
-            <img src="/client1.jpg" alt="">
+            <img src="{{ asset('/images/client1.jpg')}}" alt="">
         </div>
         <div class="col-3 client">
-            <img src="/client2.jpg" alt="">
+            <img src="{{ asset('/images/client2.jpg')}}" alt="">
         </div>
         <div class="col-3 client">
-            <img src="/client3.jpg" alt="">
+            <img src="{{ asset('/images/client3.jpg')}}" alt="">
         </div>
         <div class="col-3 client ">
-            <img src="/client4.jpg" alt="">
+            <img src="{{ asset('/images/client4.jpg')}}" alt="">
         </div>
     </div>
     <div class="row">
         <div class="col-3 client mx-auto">
-            <img src="/client5.jpg" alt="">
+            <img src="{{ asset('/images/client5.jpg')}}" alt="">
         </div>
         <div class="col-3 client mx-auto">
-            <img src="/client6.jpg" alt="">
+            <img src="{{ asset('/images/client6.jpg')}}" alt="">
         </div>
         <div class="col-3 client mx-auto">
-            <img src="/client7.jpg" alt="">
+            <img src="{{ asset('/images/client7.jpg')}}" alt="">
         </div>
         <div class="col-3 client mx-auto">
-            <img src="/client8.jpg" alt="">
+            <img src="{{ asset('/images/client8.jpg')}}" alt="">
         </div>
     </div>
 </div>
@@ -124,8 +124,8 @@
 
     </div>
     <div class="terms">
-        <span><a href="/terms">Terms</a></span>
-        <span><a href="/privacy">Privacy</a></span>
+        <span><a href="{{url('/terms')}}">Terms</a></span>
+        <span><a href="{{url('/privacy')}}">Privacy</a></span>
     </div>
     
 </div>
