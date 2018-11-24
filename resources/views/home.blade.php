@@ -5,10 +5,13 @@ Home
 @endsection
 
 @section('content')
-<div class="col-sm-5 ml-auto">
+<div class="col-12 mx-auto">
     @if (session('success'))
     <div class="alert alert-success  mx-auto">
         {{ session('success') }}
+        @if(session('download'))
+        <strong><a href="{{session('download')}}">Download Reciept</a></strong>
+        @endif
     </div>
     @endif
 
@@ -18,6 +21,8 @@ Home
     </div>
     @endif
     
+</div>
+<div class="col-sm-5 ml-auto">
     <div class="half">
         <div class="work">
             <p class="half-head">BOOK A SERVICE</p>

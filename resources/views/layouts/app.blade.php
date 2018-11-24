@@ -25,7 +25,7 @@
 <body>
     <header id="header" class="">
         <div>
-            <img src="covershift.jpeg" alt="" width="100%" height="100%">
+            <img src="/covershift.jpeg" alt="" width="100%" height="100%">
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,9 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             {{-- <a class="navbar-brand" href="#">Hidden brand</a> --}}
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-              
+
+              <li class="nav-item menu-link">
+                <a class="nav-link" href="/">Home</a>
+            </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="/">Hire Full Time Staff </a>
+                <a class="nav-link" href="/hire">Hire Full Time Staff </a>
             </li>
             <li class="nav-item menu-link">
                 <a class="nav-link" href="/about">About Us</a>
@@ -45,9 +48,7 @@
             <li class="nav-item menu-link">
                 <a class="nav-link" href="/contact">Contact </a>
             </li>
-            <li class="nav-item menu-link">
-                <a class="nav-link" href="">Refer A Client </a>
-            </li>
+            
       {{-- <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
     </li> --}}
@@ -71,11 +72,47 @@
     $(document).ready(function() {
       $('li.active').removeClass('active');
       $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
-    });
+  });
 
 </script>
 @yield('script')
-<footer>
+<div class="row clients">
+    <div class="col-12 mx-auto">
+      <h2 style="text-align: center;font-weight: bold;color:white;margin-bottom: 20px;">Trusted By</h2>  
+  </div>
+  <div class="col-12">
+    <div class="row">
+        <div class="col-3 client">
+            <img src="/client1.jpg" alt="">
+        </div>
+        <div class="col-3 client">
+            <img src="/client2.jpg" alt="">
+        </div>
+        <div class="col-3 client">
+            <img src="/client3.jpg" alt="">
+        </div>
+        <div class="col-3 client ">
+            <img src="/client4.jpg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 client mx-auto">
+            <img src="/client5.jpg" alt="">
+        </div>
+        <div class="col-3 client mx-auto">
+            <img src="/client6.jpg" alt="">
+        </div>
+        <div class="col-3 client mx-auto">
+            <img src="/client7.jpg" alt="">
+        </div>
+        <div class="col-3 client mx-auto">
+            <img src="/client8.jpg" alt="">
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="footer">
     <div class="copyright">
         ©2016 CoverShift:34 New House,67-68 Hatton Garden, London, EC1N 8JY UK
     </div>
@@ -91,7 +128,7 @@
         <span><a href="">Privacy</a></span>
     </div>
     
-</footer>
+</div>
 </body>
 
 </html>

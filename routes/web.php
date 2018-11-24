@@ -15,9 +15,33 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('details', 'OrderController@details')->name('details');
+Route::get('/about', function () {
+    return view('about');
+});
 
+Route::get('/alert', function () {
+    return view('alert');
+});
+
+Route::get('/cancel', function () {
+    return view('cancel');
+});
+
+Route::get('/download/{invoice}', function ($invoice) {
+	return response()->file(public_path('/reciept/'.$invoice.'.pdf'));
+  	//return redirect('/');
+});
+
+//Route::get('reciept/{invoice}', 'OrderController@reciept');
+
+Route::get('details', 'OrderController@details')->name('details');
+Route::get('summary/{id}', 'OrderController@summary')->name('summary');
+Route::get('make_payment/{invoice}', 'OrderController@make_payment');
+Route::post('payment', 'OrderController@payment')->name('payment');
+Route::get('success', 'OrderController@success')->name('success');
+Route::get('verify/{verify}', 'OrderController@verify_user')->name('verify');
 Route::get('/book_staff/{service}', 'OrderController@book')->name('book');
+
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
