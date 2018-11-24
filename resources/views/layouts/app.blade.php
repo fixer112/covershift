@@ -6,14 +6,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/css/app.css" rel="stylesheet" type="text/css">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
-    <script src="/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <link href="{{ asset('/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/app.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/style.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/fontawesome/css/all.css')}}" rel="stylesheet" type="text/css">
+    <script src="{{ asset('/jquery/jquery.js')}}" type="text/javascript" charset="utf-8"></script>
     {{-- <script src="/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script> --}}
-    <script src="/js/app.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/vue.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('/js/app.js')}}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('/js/vue.js')}}" type="text/javascript" charset="utf-8"></script>
     @yield('head')
 
     <title>CoverShift | @yield('title')</title>
@@ -25,7 +25,7 @@
 <body>
     <header id="header" class="">
         <div>
-            <img src="/covershift.jpeg" alt="" width="100%" height="100%">
+            <img src="{{ asset('/covershift.jpeg')}}" alt="" width="100%" height="100%">
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
