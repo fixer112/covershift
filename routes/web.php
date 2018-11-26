@@ -50,12 +50,12 @@ Route::get('/download/{invoice}', function ($invoice) {
 
 //Route::get('reciept/{invoice}', 'OrderController@reciept');
 
-Route::get('details', 'OrderController@details')->name('details');
-Route::get('summary/{id}', 'OrderController@summary')->name('summary');
-Route::get('make_payment/{invoice}', 'OrderController@make_payment');
-Route::post('payment', 'OrderController@payment')->name('payment');
-Route::get('success', 'OrderController@success')->name('success');
-Route::get('verify/{verify}', 'OrderController@verify_user')->name('verify');
+Route::get('/details', 'OrderController@details')->name('details');
+Route::get('/summary/{id}', 'OrderController@summary')->name('summary');
+Route::get('/make_payment/{invoice}', 'OrderController@make_payment');
+Route::post('/payment', 'OrderController@payment')->name('payment');
+Route::get('/success', 'OrderController@success')->name('success');
+Route::get('/verify/{verify}', 'OrderController@verify_user')->name('verify');
 Route::get('/book_staff/{service}', 'OrderController@book')->name('book');
 
 //Auth::routes();
