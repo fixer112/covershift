@@ -79,7 +79,7 @@ class OrderController extends Controller
     	        'qty' => 1,
     	    	],
     		],
-    		'invoice_id' => $invoice->id,
+    		'invoice_id' => $invoice->invoice_id,
     		'invoice_description' => $invoice->description,
     		'return_url' => url('/success'),
     		'cancel_url' => url('/cancel'),
@@ -258,7 +258,7 @@ class OrderController extends Controller
         	$request->session()->flash('failed', 'Error processing PayPal payment');
             return view('/alert');
         }
-        $invoice = Invoice::find($response['INVNUM']);
+        $invoice = Invoice::where('invoice_id',($response['INVNUM']))->first();
         $user = $invoice->user;
 
         if ($invoice->paid()) {
