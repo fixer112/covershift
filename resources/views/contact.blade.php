@@ -6,7 +6,7 @@ Contact
 
 @section('content')
 <div class="col-12 mx-auto">
-<h1 class="title">Contact</h1>
+<p class="title">Contact</p>
    <div class="detail">
    	<p>For booking enquiries, questions & clarifications, please send us a mail to:</p>
 

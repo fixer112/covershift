@@ -31,6 +31,11 @@ class CreateInvoicesTable extends Migration
             $table->string('summary');
             $table->string('total');
             $table->string('payment_status')->default('Invalid');
+            $table->string('email');
+            $table->string('company_name');
+            $table->string('mobile');
+            $table->string('name');
+
 
             $table->timestamps();
         });

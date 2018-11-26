@@ -51,10 +51,10 @@ header li a:hover, footer li a:hover {
 .half-head{
     font-weight: bolder;
     color: blue;
-    /*text-align: center;*/
+    font-size: initial;
 }
 .half-sub{
-	font-size: 12px;
+	font-size: 14px;
 }
 .container {
     margin-top: 50px;
@@ -192,7 +192,7 @@ label.control-label {
     margin-bottom: 30px;
 }
 .clients{
-    background-color:#090935e6;
+    /*background-color:#090935e6;*/
 }
 .title {
     text-align: center;

@@ -32,11 +32,11 @@ Summary for #{{$invoice->invoice_id}}
 		</div>
 	</div>
 	@if($invoice->paid())
-	<a href="/reciept/{{$invoice->invoice_id}}.pdf"><button class="btn btn-success">
+	<a href="{{url('/reciept/'.$invoice->invoice_id.'.pdf')}}"><button class="btn btn-success">
 		Download receipt
 	</button>
 	@else
-	<a href="/make_payment/{{$invoice->id}}"><button class="btn btn-success">
+	<a href="{{url('/make_payment/'.$invoice->id)}}"><button class="btn btn-success">
 		Continue
 	</button></a>
 	@endif

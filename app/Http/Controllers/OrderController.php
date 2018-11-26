@@ -50,23 +50,23 @@ class OrderController extends Controller
     	return redirect('/');
     }
 
-    public function summary($id){
+    public function summary(Request $request, $id){
     	$invoice = Invoice::where('invoice_id', $id)->first();
-    	$user = $invoice->user;
-
-    	if (!$user->email_verified_at) {
-    			$user->update(['verify' => str_random(60)]);
-    			$url = url('/verify/'.$user->verify.'/?invoice='.$invoice->id);
-    			//return redirect('/verify/'.$user->verify.'/'.$invoice->id);
-    			$request->session()->flash('failed', 'Please Confirm your email by clicking on the link sent to your email ('.$user->email.') and complete transaction');
-    			return redirect('/');
-    			//return '<a href="'.$url.'">Verify</a>';
-    		}
-    		
     	if (!$invoice) {
-    		$request->session()->flash('failed', 'Order does not exixt');
-    			return redirect('/');
+    		$request->session()->flash('failed', 'Order does not exist');
+    			return view('/alert');
     	}
+        $user = $invoice->user;
+
+        if (!$user->email_verified_at) {
+                $user->update(['verify' => str_random(60)]);
+                $url = url('/verify/'.$user->verify.'/?invoice='.$invoice->id);
+                //return redirect('/verify/'.$user->verify.'/'.$invoice->id);
+                $request->session()->flash('failed', 'Please Confirm your email by clicking on the link sent to your email ('.$user->email.') and complete transaction');
+                return view('/alert');
+                //return '<a href="'.$url.'">Verify</a>';
+            }
+            
     	return view('summary',compact('invoice'));
     }
 
@@ -157,6 +157,10 @@ class OrderController extends Controller
     		'shift_hour' => $request->shift_hour,
     		'summary' => $request->summary,
     		'total' => $request->total,
+            'name' => $request->fname.' '.$request->lname,
+            'email' => $request->email,
+            'company_name' => $request->company_name,
+            'mobile' => $request->mobile,
     	]);
 
     	$invoice->update([
@@ -187,12 +191,13 @@ class OrderController extends Controller
     			try {
     				
     			$user->notify(new OrderBooked($user->fname, $subject, $msg,'Confirm Email', $url ));
+
     			} catch (Exception $e) {
     				Log::error($e);
     			}
 
-    			$request->session()->flash('failed', 'Please Confirm your email by clicking on the link sent to your email and complete transaction');
-    			return redirect('/');
+    			$request->session()->flash('verify', 'Please Confirm your email by clicking on the link sent to your email and complete transaction');
+    			return view('/alert');
     			//return '<a href="'.$url.'">Verify</a>';
     		}else{
 
@@ -251,20 +256,20 @@ class OrderController extends Controller
         // we return back with error
         if (!in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
         	$request->session()->flash('failed', 'Error processing PayPal payment');
-            return redirect('/');
+            return view('/alert');
         }
         $invoice = Invoice::find($response['INVNUM']);
         $user = $invoice->user;
 
         if ($invoice->paid()) {
         	$request->session()->flash('failed', 'Payment has already been made for this InvoiceID. # '.$invoice->invoice_id);
-            return redirect('/');
+            return view('/alert');
         }
         $data = $this->getCart($invoice);
         $payment_status = $this->provider->doExpressCheckoutPayment($data, $token, $PayerID);
         if ($payment_status['ACK'] == 'Failure') {
         	$request->session()->flash('failed', $payment_status['L_LONGMESSAGE0']." #".$invoice->invoice_id);
-            return redirect('/');
+            return view('/alert');
         }
 
         $status = $payment_status['PAYMENTINFO_0_PAYMENTSTATUS'];
@@ -274,7 +279,7 @@ class OrderController extends Controller
 
         if (!$invoice->paid()) {
         	$request->session()->flash('failed', 'Error processing PayPal payment for Order #' . $invoice->invoice_id . '!');
-            return redirect('/');
+            return view('/alert');
         }
 
         $this->reciept($invoice);
@@ -289,7 +294,7 @@ class OrderController extends Controller
         $request->session()->flash('download', '/reciept/'. $invoice->invoice_id.'.pdf');
         //response()->file(public_path('/reciept/'. $invoice->invoice_id.'pdf'));
 
-            return redirect('/');
+            return view('/alert');
         //return $status;
         //return $payment_status;
     }
@@ -300,7 +305,7 @@ class OrderController extends Controller
     		$user->update(['email_verified_at' => Carbon::now(), 'verify' => '']);
     	}else{
     		$request->session()->flash('failed', 'Email already verified or Invalid verification token');
-    		return redirect('/');
+    		return redirect('/alert');
     	}
     	if ($request->invoice) {
     		$invoice = Invoice::find($request->invoice);
@@ -318,7 +323,7 @@ class OrderController extends Controller
     			return redirect('summary/'.$invoice->invoice_id);
     		}else{
     			$request->session()->flash('failed', 'InvoiceID. # '.$invoice->invoice_id.' does not exist');
-    	        return redirect('/');
+    	        return view('/alert');
     		}
     	}
 

@@ -6,13 +6,13 @@ Privacy Policy
 
 @section('content')
 <div class="col-12 mx-auto">
-<h1 class="title">Privacy policy</h1>
+<p class="title">Privacy policy</p>
    <div class="detail">
 
    	<p>Protecting your private information is our priority. This Statement of Privacy applies to the CoverShift and controls data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references is to CoverShift and covershift.co.uk The CoverShift website is a service booking system. By using the CoverShift website, you consent to the data practices in this statement. We will not share or sell your data to another party.</p>
 
 
-   	<h3 class="sub-title">Your Personal Information</h3>
+   	<p>Your Personal Information<p>
 
    	<p>CoverShift may collect personally identifiable information, such as your name. If you purchase our products and services, billing and credit card information will be collected. This information is used to complete the purchase transaction.</p>
 
@@ -21,7 +21,7 @@ Privacy Policy
 
    	<p>We encourage you to review the privacy statements of websites you choose to link to from us so that you can understand how those websites collect, use and share your information. CoverShift is not responsible for the privacy statements or other content on websites outside of our website.</p>
 
-   	<h3 class="sub-title">Use and Sharing of your Personal Information</h3>
+   	<p>Use and Sharing of your Personal Information</p>
 
    	<p>CoverShift collects and uses your personal information only to operate covershift.co.uk and deliver the services therein you have requested. We do not use your personal information for marketing of goods and services. We do not sell, rent or lease our customer lists to third parties.</p>
 
@@ -30,7 +30,7 @@ Privacy Policy
 
    	<p>CoverShift will disclose your personal information, without notice, only if required to do so by law or in the good faith belief that such action is necessary to conform to the law or comply with legal process as subjects of the State.</p>
 
-   	<h3 class="sub-title">Use of Cookies:</h3>
+   	<p>Use of Cookies:</p>
 
    	<p>The  website may use "cookies" to help you personalize your online experience. A cookie is a text file that is placed on your hard disk by a web page server. Cookies do not run programs or deliver viruses to your computer. Cookies are uniquely assigned to you, and can only be read by a web server in the domain that issued the cookie to you.</p>
 
@@ -41,13 +41,13 @@ Privacy Policy
    	<p>We do not hold payment information like credit or debit card. When personal information (such as from credit or debit card number) is transmitted to other websites, it is protected through the use of encryption, such as the Secure Sockets Layer (SSL) protocol.</p>
 
 
-   	<h3 class="sub-title">Underage:</h3>
+   	<p>Underage:</p>
    	<p>CoverShift do not offer services to the underage neither do we knowingly collect personally identifiable information from the underage</p>
 
    	<p>CoverShift occasionally update this Statement of Privacy to reflect company and customer feedback. You are encouraged to review this Statement periodically to be informed of how your information is being protected.</p>
 
 
-   	<h3 class="sub-title">Updates:</h3>
+   	<p>Updates:</p>
    	<p>We welcome questions for further clarification.</p>
    </div>
 </div>

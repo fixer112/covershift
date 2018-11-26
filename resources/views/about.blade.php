@@ -6,7 +6,7 @@ About
 
 @section('content')
 <div class="col-12 mx-auto">
-<h1 class="title">About us</h1>
+<p>class="title">About us</p>
    <div class="detail">
    	<p>CoverShift  is an on-demand staffing system that provides temporary jobs to Ad hoc hands and staff to businesses in a simplified process. We are based in London's central business district of Hatton Garden, EC1N.</p>
 

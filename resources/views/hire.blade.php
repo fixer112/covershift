@@ -6,10 +6,10 @@ Hire Full Time Staff
 
 @section('content')
 <div class="col-12 mx-auto">
-<h1 class="title">Hire  Staff</h1>
+<p class="title">Hire Full Time Staff</p>
    <div class="detail">
-   	
-   <strong>	Hire a Temp to Permanent staff:</strong>
+
+   <p>	Hire a Temp to Permanent staff:</p>
 
 
 <p>Want to hire our temps on a permanent basis?<br>

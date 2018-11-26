@@ -78,7 +78,7 @@
 @yield('script')
 <div class="row clients">
     <div class="col-12 mx-auto">
-      <h2 style="text-align: center;font-weight: bold;color:white;margin-bottom: 20px;margin-top: 20px;">Trusted By</h2>  
+      <h3 style="text-align: center;font-weight: bold;margin-bottom: 20px;margin-top: 20px;">Trusted By</h3>  
   </div>
   <div class="col-12">
     <div class="row">
@@ -113,16 +113,20 @@
 </div>
 
 <div class="footer">
-    <div class="copyright">
-        ©2016 CoverShift:34 New House,67-68 Hatton Garden, London, EC1N 8JY UK
+    <div class="copyright d-none d-sm-block">
+        ©2016 CoverShift: 34 New House, 67-68 Hatton Garden, London, EC1N 8JY UK.
+    </div>
+
+     <div class="copyright d-sm-none">
+        ©2016 CoverShift: <br> 34 New House, <br> 67-68 Hatton Garden, <br> London,<br> EC1N 8JY <br> United Kingdom.
     </div>
     
-    <div class="feature">
+    {{-- <div class="feature">
         <span><i class="fa fa-thumbs-up"></i> Less Stress</span>
         <span><i class="fa fa-clock"></i> Save Time</span>
         <span><i class="fa fa-pound-sign"></i> Save Cost</span>
 
-    </div>
+    </div> --}}
     <div class="terms">
         <span><a href="{{url('/terms')}}">Terms</a></span>
         <span><a href="{{url('/privacy')}}">Privacy</a></span>

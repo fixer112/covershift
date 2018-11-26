@@ -25,9 +25,9 @@ Home
 <div class="col-sm-5 ml-auto">
     <div class="half">
         <div class="work">
-            <p class="half-head">BOOK A SERVICE</p>
+            <p class="half-head">Welcome to Booking Service Page</p>
 
-            <p class="half-sub">Please click on a service</p>
+            <p class="half-sub">Please click on a service and continue</p>
             <form v-on:keydown.enter.prevent.self :action="book_staff" method="get" accept-charset="utf-8">
                 {{ csrf_field() }}
                 <div class="form-group services row">
@@ -35,7 +35,7 @@ Home
                         <input ref="1" type="checkbox" name="service" class="check" value="Office Porter" @click="check(1,'13.50')"> <span class="service"><strong>Office Porter</strong> <p>(Load & Unload goods, Documents sorting & Storage, Adhoc labourer, Store Clearance & Removals, Office dismantling etc)</p></span> 
                     </div>
 
-                    <div class="price col-6"><span>£13.50/hr</span></div>
+                    {{-- <div class="price col-6"><span>£13.50/hr</span></div> --}}
                 </div>
 
                 <div class="form-group services row">
@@ -43,7 +43,7 @@ Home
                         <input ref="2" type="checkbox" name="service" class="check" value="SIA Security" @click="check(2,'14.50')"> <span class="service"><strong>SIA Security</strong> <p>(Events, Door Supervisor, Deterrent, Buildings, House Party, Wedding, Close Protection)</p></span>
                     </div>
 
-                    <div class="price col-6"><span>£14.50/hr</span></div>
+                    {{-- <div class="price col-6"><span>£14.50/hr</span></div> --}}
                 </div>
 
                 <div class="form-group services row">
@@ -51,7 +51,7 @@ Home
                         <input ref="3" type="checkbox" name="service" class="check" value="Helping Hands" @click="check(3,'13.00')"> <span class="service"><strong>Helping Hands</strong><p>(Load & Unload goods,Ad hoc Labourers, Errand & Odd jobs)</p></span> 
                     </div>
 
-                    <div class="price col-6"><span>£13.00/hr</span></div>
+                    {{-- <div class="price col-6"><span>£13.00/hr</span></div> --}}
                 </div>
 
                 <div class="form-group services row">
@@ -59,7 +59,7 @@ Home
                         <input  ref="4" type="checkbox" name="service" class="check" value="Facilities Assistant" @click="check(4,'13.50')"> <span class="service"><strong>Facilities Assistant</strong></span>
                     </div>
 
-                    <div class="price col-6"><span >£13.50/hr</span></div>
+                    {{-- <div class="price col-6"><span >£13.50/hr</span></div> --}}
                 </div>
 
                 <div class="form-group services row">
@@ -67,7 +67,7 @@ Home
                         <input ref="5" type="checkbox" name="service" class="check" value="Postroom Assistant" @click="check(5,'13.00')"> <span class="service"><strong>Postroom Assistant</strong></span>
                     </div>
 
-                    <div class="price col-6"><span >£13.00/hr</span></div>
+                    {{-- <div class="price col-6"><span >£13.00/hr</span></div> --}}
                 </div>
 
                 <div class="form-group services row">
@@ -75,7 +75,7 @@ Home
                         <input ref="6" type="checkbox" name="service" class="check" value="Event Assistant" @click="check(6,'13.00')"> <span class="service"><strong>Event Assistant</strong> <p>(Event Steward)</p></span> 
                     </div>
 
-                    <div class="price col-6"><span>£13.00/hr</span></div>
+                    {{-- <div class="price col-6"><span>£13.00/hr</span></div> --}}
                 </div>
 
                 <div class="form-group services row">
@@ -83,7 +83,7 @@ Home
                         <input ref="7" type="checkbox" name="service" class="check" value="Kitchen Porter" @click="check(7,'12.50')"> <span class="service"><strong>Kitchen Porter</strong></span> 
                     </div>
 
-                    <div class="price col-6"><span>£12.50/hr</span></div>
+                    {{-- <div class="price col-6"><span>£12.50/hr</span></div> --}}
                 </div>
 
                 <div class="form-group services row">
@@ -91,11 +91,11 @@ Home
                         <input ref="8" type="checkbox" name="service" class="check" value="Kitchen Assistant" @click="check(8,'12.50')"> <span class="service"><strong>Kitchen Assistant</strong></span> 
                     </div>
 
-                    <div class="price col-6"><span class="price">£12.50/hr</span></div>
+                    {{-- <div class="price col-6"><span class="price">£12.50/hr</span></div> --}}
                 </div>
 
                 <button type="submit" class="btn btn-success" :disabled="book_staff ==''">
-                    Continue
+                    <strong>Continue  to Complete booking</strong>
                 </button>
             </form>
         </div>
@@ -157,6 +157,7 @@ Home
                         <label for="special" class="control-label">Specialisation</label>
                         {{-- <textarea class="form-control" name="postcode" value="{{ old('special') }}"required autofocus></textarea> --}}
                         <select name="service" class="form-control">
+                            <option value="" selected disabled>Please pick a skill</option>
                             <option value="Office Porter">Office Porter</option>
                             <option value="SIA Security">SIA Security</option>
                             <option value="Helping Hands">Helping Hands</option>
@@ -205,7 +206,7 @@ Home
                 if (number == num) {
                     this.$refs[number].checked = checked;
                     if (checked) {
-                        this.book_staff = "/book_staff/"+service;
+                        this.book_staff = "{{url('/book_staff/')}}/"+service;
                     }else{
                         this.book_staff= "";
                     }

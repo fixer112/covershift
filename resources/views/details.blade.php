@@ -11,23 +11,7 @@ Order Service
 @section('content')
 <div class="col-12">
 
-    <div class="row">
-        <div class="alert alert-success col-12 mx-auto">
-        <div style="text-align: center;">
-        <h2>Summary</h2> <br> <span style="font-size: 10px;font-weight: bold" v-if="from && to">From @{{from_time}} To @{{to_time}}</span>
-        </div> 
-        <div class="summary">
-        <p><span class="name">Service</span> <span class="value">{{str_replace('-', ' ', $service)}}</span></p>
-        <p><span class="name">Price per hour</span> <span class="value">£{{$price}}</span></p>
-        <p><span class="name">Total Number of Days</span> <span class="value">@{{days}}</span></p>
-        <p><span class="name">Total number of staff(s)</span> <span class="value">@{{staff_num}}</span></p>
-        <p><span class="name">Total number of hour(s) daily</span> <span class="value">@{{hours}}</span></p>
-        <p v-if="van == 1"><span class="name">Total number of hour(s) needed for van</span> <span class="value">@{{van_hour}}</span></p>
-        <p><span class="name">Total Price</span><span class="value total"> £@{{total}}</span></p>
-        </div>
-
-    </div>
-</div>
+    
 
 <div class="row">
         @if (count($errors) > 0)
@@ -42,7 +26,7 @@ Order Service
             @endif
     </div>
     
-<form action="/payment" method="post" accept-charset="utf-8">
+<form action="{{url('/payment')}}" method="post" accept-charset="utf-8">
     {{ csrf_field() }}
     <div class="form-group{{ $errors->has('fname') ? ' has-error' : '' }}">
 
@@ -93,10 +77,11 @@ Order Service
     <div class="form-group">
         <label class="control-label">Start and Finish time</label>
         <div class="form-control">
-            <span>From </span><input class="" type="time" v-model="from" required>
+        
+            <input class="time" type="time" v-model="from" required>
 
-
-            <span>To </span><input class="" type="time" v-model="to" required>
+            
+            <input class="time" type="time" v-model="to" required>
             <input type="hidden" :value="to_time" name="to">
             <input type="hidden" :value="from_time" name="from">
         </div>
@@ -166,8 +151,8 @@ Order Service
             </select>
         </div>
 
-        <div class="form-group">
-            <label class="control-label">Will you need a van (£30/hr)</label>
+        <div class="form-group" v-if="van!=0">
+            <label class="control-label">Hours needed for van</label>
             <select class="form-control" name="van_hour" v-model="van_hour" @change="cal" :disabled="van == 0" :required="van == 1">
                 @php
                 $num = 2;
@@ -197,8 +182,26 @@ Order Service
 
     </form>
 
+        <div class="row">
+            <div class="alert alert-success col-12 mx-auto">
+            <div style="text-align: center;">
+            <h2>Summary</h2> <br> <span style="font-size: 10px;font-weight: bold" v-if="from && to">From @{{from_time}} To @{{to_time}}</span>
+            </div> 
+            <div class="summary">
+            <p><span class="name">Service</span> <span class="value">{{str_replace('-', ' ', $service)}}</span></p>
+            <p><span class="name">Price per hour</span> <span class="value">£{{$price}}</span></p>
+            <p><span class="name">Total Number of Days</span> <span class="value">@{{days}}</span></p>
+            <p><span class="name">Total number of staff(s)</span> <span class="value">@{{staff_num}}</span></p>
+            <p><span class="name">Total number of hour(s) daily</span> <span class="value">@{{hours}}</span></p>
+            <p v-if="van == 1"><span class="name">Total number of hour(s) needed for van</span> <span class="value">@{{van_hour}}</span></p>
+            <p><span class="name">Total Price</span><span class="value total"> £@{{total}}</span></p>
+            </div>
+
+        </div>
+    </div>
+
 </div>
-</div>
+
 @endsection
 
 @section('script')

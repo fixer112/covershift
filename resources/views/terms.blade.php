@@ -6,12 +6,8 @@ Terms
 
 @section('content')
 <div class="col-12 mx-auto">
-<h1 class="title">Terms</h1>
+<p class="title">CoverShift Terms of Business</p>
    <div class="detail">
-
-   	<h3 class="sub-title">CoverShift Terms of business</h3>
-
-   	<strong>About these terms:</strong>
 
    	<p>1. These are our terms of business. They set out the terms of the contract between you and us, whether you use our Service as a freelancer, as a Client, or both.</p>
 
@@ -100,7 +96,7 @@ Terms
 
    	<p>41. These terms and all non-contractual obligations arising out of or in connection with them are governed by English law and subject to the exclusive jurisdiction of the English courts.</p>
 
-   	<strong>Definitions of terms:</strong>
+   	Definition of terms:
    	<p>User means any person who uses our system as a client, posting Jobs to be performed by temps, casual worker or freelancers as they may from time to time agree.</p>
 
    	<p>Roles and skill in whole or in part, means requirement submitted to our system by a user with a view to its being performed by a temp, casual worker or freelancer in return for payment; System means our platform and site providing an online marketplace for services and skills.</p>
