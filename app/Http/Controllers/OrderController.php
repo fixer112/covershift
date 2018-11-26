@@ -291,7 +291,7 @@ class OrderController extends Controller
         }
 
         $request->session()->flash('success', 'Order #' . $invoice->invoice_id . ' has been paid successfully!');
-        $request->session()->flash('download', '/reciept/'. $invoice->invoice_id.'.pdf');
+        $request->session()->flash('download', '/download/'. $invoice->invoice_id);
         //response()->file(public_path('/reciept/'. $invoice->invoice_id.'pdf'));
 
             return view('/alert');

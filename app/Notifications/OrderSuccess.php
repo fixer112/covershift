@@ -47,7 +47,7 @@ class OrderSuccess extends Notification
         $mail->subject('Order #'.$this->invoice->invoice_id.' paid');
         $mail->greeting('Hello '.$this->invoice->user->fname);
         $mail->line('You have successfully paid for Order #'.$this->invoice->invoice_id);
-        $mail->action('Download reciept', url('/reciept/'.$this->invoice->invoice_id.'.pdf'));
+        $mail->action('Download reciept', url('/download/'.$this->invoice->invoice_id));
         /*$mail->line("Service : ".$this->invoice->title);
         $mail->line(" Price/Hour: ".$this->invoice->price);
         $mail->line("Number of Days : ".$this->invoice->days_needed);
