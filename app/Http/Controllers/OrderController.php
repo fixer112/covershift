@@ -344,7 +344,7 @@ class OrderController extends Controller
     	 $this->reciept->setTime(date('h:i:s A',time()));   //Billing Time
     	 //$this->reciept->setDue(date('M dS ,Y',strtotime('+3 months')));    // Due Date
     	 $this->reciept->setFrom(array("CoverShift","CoverShift","34 New House,67-68 Hatton Garden, London","London, EC1N 8JY UK"));
-    	 $this->reciept->setTo(array($name,$company,"",""));
+    	 $this->reciept->setTo(array($invoice->name,$invoice->company_name,"",""));
     	 
     	 $this->reciept->addItem($invoice->title,$invoice->description,1,0,$invoice->price,0,$invoice->price * $invoice->shift_hour);
     	 /*
