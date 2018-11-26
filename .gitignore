@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor
 /reciept/
+/test
 /.idea
 /.vscode
 /nbproject
