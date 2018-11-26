@@ -6,8 +6,8 @@ Terms
 
 @section('content')
 <div class="col-12 mx-auto">
-<p class="title">CoverShift Terms of Business</p>
-   <div class="detail">
+ <p style="text-align: center;">CoverShift Terms of Business</p>
+   <div class="detail" style="font-size: 10px">
 
    	<p>1. These are our terms of business. They set out the terms of the contract between you and us, whether you use our Service as a freelancer, as a Client, or both.</p>
 

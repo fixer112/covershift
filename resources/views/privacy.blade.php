@@ -6,8 +6,8 @@ Privacy Policy
 
 @section('content')
 <div class="col-12 mx-auto">
-<p class="title">Privacy policy</p>
-   <div class="detail">
+<p style="text-align: center;">Privacy policy</p>
+   <div class="detail" style="font-size: 10px">
 
    	<p>Protecting your private information is our priority. This Statement of Privacy applies to the CoverShift and controls data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references is to CoverShift and covershift.co.uk The CoverShift website is a service booking system. By using the CoverShift website, you consent to the data practices in this statement. We will not share or sell your data to another party.</p>
 
