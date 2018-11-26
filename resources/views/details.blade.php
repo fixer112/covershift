@@ -166,7 +166,7 @@ Order Service
 
         <div class="form-group">
             <label class="control-label">Please summarise duties expected of staff or any instructions</label>
-            <textarea class="form-control" name="summary" required></textarea>
+            <textarea class="form-control" name="summary" v-model="summary" required></textarea>
         </div>
 
 
@@ -192,6 +192,7 @@ Order Service
             <p><span class="name">Price per hour</span> <span class="value">£{{$price}}</span></p>
             <p><span class="name">Total Number of Days</span> <span class="value">@{{days}}</span></p>
             <p><span class="name">Total number of staff(s)</span> <span class="value">@{{staff_num}}</span></p>
+            <p><span class="name">Summary to Staff</span> <span class="value">@{{summary}}</span></p>
             <p><span class="name">Total number of hour(s) daily</span> <span class="value">@{{hours}}</span></p>
             <p v-if="van == 1"><span class="name">Total number of hour(s) needed for van</span> <span class="value">@{{van_hour}}</span></p>
             <p><span class="name">Total Price</span><span class="value total"> £@{{total}}</span></p>
@@ -223,6 +224,7 @@ Order Service
         total:"",
         van:0,
         van_hour:2,
+        summary:"",
     },
     methods:{
         remove_date(day){
