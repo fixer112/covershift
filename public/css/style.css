@@ -21,6 +21,12 @@ header img{
     overflow: auto;*/
 
 }
+@media (max-width:576px){
+header img{
+    height: 100px;
+
+}
+}
 /*header ul, footer ul {
     list-style-type: none;
     margin: 0;
