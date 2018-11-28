@@ -78,7 +78,7 @@
 @yield('script')
 <div class="row clients">
     <div class="col-12 mx-auto">
-      <h3 style="text-align: center;font-weight: bold;margin-bottom: 20px;margin-top: 20px;">Trusted By</h3>  
+      <h5 style="text-align: center;font-weight: bold;margin-bottom: 20px;margin-top: 20px;">Trusted By</h5>  
   </div>
   <div class="col-12">
     <div class="row">

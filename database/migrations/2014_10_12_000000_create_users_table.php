@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('fname');
             $table->string('lname');
             $table->string('email')->unique();
+            $table->boolean('role')->default(false);
             $table->string('company_name');
             $table->string('mobile');
             $table->string('verify')->nullable();

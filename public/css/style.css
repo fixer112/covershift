@@ -69,7 +69,7 @@ header li a:hover, footer li a:hover {
 .half {
 	margin-bottom: 20px;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-color: #3333;
     border-radius: 5px;
     padding: 20px;
@@ -207,5 +207,9 @@ label.control-label {
 }
 .sub-title {
     font-weight: bold;
+
+}
+input[type="checkbox"], input[type="radio"] {
+    outline: 2px solid green;
 
 }

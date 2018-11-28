@@ -174,14 +174,6 @@ Order Service
         <input type="hidden" name="price" value="{{$price}}">
         <input type="hidden" name="total" :value="total">
 
-        <div class="form-group">
-        <button class="btn btn-success">
-            Continue
-        </button>
-    </div>
-
-    </form>
-
         <div class="row">
             <div class="alert alert-success col-12 mx-auto">
             <div style="text-align: center;">
@@ -195,11 +187,21 @@ Order Service
             <p><span class="name">Summary to Staff</span> <span class="value">@{{summary}}</span></p>
             <p><span class="name">Total number of hour(s) daily</span> <span class="value">@{{hours}}</span></p>
             <p v-if="van == 1"><span class="name">Total number of hour(s) needed for van</span> <span class="value">@{{van_hour}}</span></p>
-            <p><span class="name">Total Price</span><span class="value total"> £@{{total}}</span></p>
+            <p><span class="name">Total Cost</span><span class="value total"> £@{{total}}</span></p>
             </div>
 
         </div>
     </div>
+
+        <div class="form-group">
+        <button class="btn btn-success">
+            Continue
+        </button>
+    </div>
+
+    </form>
+
+        
 
 </div>
 

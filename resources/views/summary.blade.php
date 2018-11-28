@@ -27,7 +27,7 @@ Summary for #{{$invoice->invoice_id}}
 			@endif
 			<p><span class="name">Dates</span> <span class="value">{{$invoice->dates}}</span></p>
 			<p><span class="name">Summary to Staff</span> <span class="value">{{$invoice->summary}}</span></p>
-			<p><span class="name">Total Price</span><span class="value total"> £{{$invoice->total}}</span></p>
+			<p><span class="name">Total Cost</span><span class="value total"> £{{$invoice->total}}</span></p>
 
 		</div>
 	</div>

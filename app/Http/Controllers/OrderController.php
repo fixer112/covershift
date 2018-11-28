@@ -11,6 +11,8 @@ use Carbon\Carbon;
 use Konekt\PdfInvoice\InvoicePrinter;
 use App\Notifications\OrderBooked;
 use App\Notifications\OrderSuccess;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Work;
 use Log;
 
 class OrderController extends Controller
@@ -391,6 +393,19 @@ class OrderController extends Controller
     	 $this->reciept->render(public_path('/reciept/'.$invoice->invoice_id.'.pdf'),'F');
     	 //$this->reciept->render($invoice->invoice_id.'.pdf',$type);
     	 
+    }
+
+    public function work(Request $request){
+        $reply = $request->email;
+        $name =  $request->fname.' '.$request->lname;
+        $content = 'First Name : '.$request->fname.
+                    '<br> Last Name : '.$request->lname.
+                    '<br> Email : '$request->email.
+                    '<br> PostCode : '.$request->postcode.
+                    '<br> Mobile : '.$request->number.
+                    '<br> Specialisation '.$request->service;
+         Mail::to('abula3003@gmail.com')->send(new Work($content, $reply, $name));
+
     }
 
 

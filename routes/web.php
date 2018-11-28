@@ -60,4 +60,8 @@ Route::get('/book_staff/{service}', 'OrderController@book')->name('book');
 
 //Auth::routes();
 
+Route::get('/admin', 'AdminController@admin')->name('admin');
+Route::get('/admin-login', 'AdminController@login_get')->name('login');
+Route::post('/admin-login', 'AdminController@login_post')->name('login_post');
+
 //Route::get('/home', 'HomeController@index')->name('home');

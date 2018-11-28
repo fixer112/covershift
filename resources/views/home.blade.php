@@ -147,14 +147,14 @@ Home
 
                     <div class="input">
                         <label for="number" class="control-label">Mobile Number</label>
-                        <input type="text" class="form-control" name="postcode" value="{{ old('postcode') }}"required autofocus>
+                        <input type="text" class="form-control" name="number" value="{{ old('number') }}"required autofocus>
                     </div>
                 </div>
 
-                <div class="form-group{{ $errors->has('special') ? ' has-error' : '' }}">
+                <div class="form-group{{ $errors->has('service') ? ' has-error' : '' }}">
 
                     <div class="input">
-                        <label for="special" class="control-label">Specialisation</label>
+                        <label for="service" class="control-label">Specialisation</label>
                         {{-- <textarea class="form-control" name="postcode" value="{{ old('special') }}"required autofocus></textarea> --}}
                         <select name="service" class="form-control">
                             <option value="" selected disabled>Please pick a skill</option>
@@ -174,7 +174,7 @@ Home
 
                     <div class="input">
                         <input type="checkbox" name="accept" required autofocus>
-                        <span>By submitting you accept the <a href="">terms and conditions</a></span>
+                        <span>By submitting you accept the <a href="{{url('/terms')}}">terms and conditions</a></span>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success">
