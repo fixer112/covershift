@@ -213,3 +213,9 @@ input[type="checkbox"], input[type="radio"] {
     outline: 2px solid green;
 
 }
+@media (max-width:576px){
+.book{
+    width: 100%; 
+    font-size: xx-small;
+}
+}

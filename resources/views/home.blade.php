@@ -94,8 +94,8 @@ Home
                     {{-- <div class="price col-6"><span class="price">£12.50/hr</span></div> --}}
                 </div>
 
-                <button type="submit" class="btn btn-success" :disabled="book_staff ==''">
-                    <strong>Continue  to Complete booking</strong>
+                <button type="submit" class="btn btn-success book" :disabled="book_staff ==''" style="">
+                    <strong>Continue to Complete booking</strong>
                 </button>
             </form>
         </div>
