@@ -400,7 +400,7 @@ class OrderController extends Controller
         $name =  $request->fname.' '.$request->lname;
         $content = 'First Name : '.$request->fname.
                     '<br> Last Name : '.$request->lname.
-                    '<br> Email : '$request->email.
+                    '<br> Email : '.$request->email.
                     '<br> PostCode : '.$request->postcode.
                     '<br> Mobile : '.$request->number.
                     '<br> Specialisation '.$request->service;
