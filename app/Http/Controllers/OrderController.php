@@ -415,7 +415,7 @@ class OrderController extends Controller
                     '<br> PostCode : '.$request->postcode.
                     '<br> Mobile : '.$request->number.
                     '<br> Specialisation '.$request->service;
-         Mail::to('abula3003@gmail.com')->send(new Work($content));
+         Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content));
 
                 $request->session()->flash('success', 'Email sent Successfully. We will get back to you soon');
                  return view('/alert');
