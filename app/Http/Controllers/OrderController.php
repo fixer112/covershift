@@ -396,6 +396,17 @@ class OrderController extends Controller
     }
 
     public function work(Request $request){
+
+        $this->validate($request, [
+                    'fname' => 'required|string|max:50',
+                    'email' => 'required|email',
+                    'mobile' => 'required|numeric',
+                    'lname' => 'required|string|max:50',
+                    'postcode' => 'required|numeric',
+                    'service' => 'required',
+                    'accept' => 'required|accepted',
+                     ]);
+
         //$reply = $request->email;
         //$name =  $request->fname.' '.$request->lname;
         $content = 'First Name : '.$request->fname.
@@ -405,6 +416,9 @@ class OrderController extends Controller
                     '<br> Mobile : '.$request->number.
                     '<br> Specialisation '.$request->service;
          Mail::to('abula3003@gmail.com')->send(new Work($content));
+
+                $request->session()->flash('success', 'Email sent Successfully. We will get back to you soon');
+                 return view('/alert');
 
     }
 

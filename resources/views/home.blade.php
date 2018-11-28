@@ -105,6 +105,18 @@ Home
 <div class="mr-auto col-sm-5">
     <div class="half">
         <div class="work">
+            <div class="row">
+        @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                    <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                    </ul>
+                </div>
+            @endif
+    </div>
             <p class="half-head">WORK FOR US</p>
 
             <p class="half-sub">Work when you want <br> Earn £8 - £10.50</p>
@@ -131,7 +143,7 @@ Home
 
                     <div class="input">
                         <label for="email" class="control-label">Email</label>
-                        <input type="email" class="form-control" name="fname" value="{{ old('fname') }}"required autofocus>
+                        <input type="email" class="form-control" name="email" value="{{ old('email') }}"required autofocus>
                     </div>
                 </div>
 
@@ -173,7 +185,7 @@ Home
                 <div class="form-group{{ $errors->has('accept') ? ' has-error' : '' }}">
 
                     <div class="input">
-                        <input type="checkbox" name="accept" required autofocus>
+                        <input type="checkbox" name="accept"  value="1" required autofocus>
                         <span>By submitting you accept the <a href="{{url('/terms')}}">terms and conditions</a></span>
                     </div>
                 </div>
