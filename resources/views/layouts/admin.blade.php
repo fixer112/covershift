@@ -146,7 +146,7 @@
                       9%
                       <i class="fe fe-chevron-up"></i>
                     </div> --}}
-                    <div class="h1 m-0">@money($paids->sum('total'))</div>
+                    <div class="h1 m-0">£@money($paids->sum('total'))</div>
                     <div class="text-muted mb-4">Amounts Paid</div>
                   </div>
                 </div>
@@ -158,7 +158,7 @@
                       3%
                       <i class="fe fe-chevron-up"></i>
                     </div> --}}
-                    <div class="h1 m-0">@money($unpaids->sum('total'))</div>
+                    <div class="h1 m-0">£@money($unpaids->sum('total'))</div>
                     <div class="text-muted mb-4">Amounts Unpaid</div>
                   </div>
                 </div>
@@ -196,7 +196,7 @@
                     <h3 class="card-title">Paid Invoices</h3>
                   </div>
                   <div class="table-responsive">
-                    <table class="table" id="data">
+                    <table class="table text-nowrap" id="data">
                      {{--  card-table table-vcenter text-nowrap --}}
                       <thead>
                         <tr>
@@ -212,20 +212,20 @@
                           <th>No of staff</th>
                           <th>Shift Hour</th>
                           <th>Summary</th>
-                          <th>Client Name</th>
-                          <th>Client Email</th>
-                          <th>Client Number</th>
-                          <th>Client Company Name</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Number</th>
+                          <th>Company Name</th>
                         </tr>
                       </thead>
                       <tbody>
                           @foreach($paids as $paid)
                           @php
-                          $user = $users->where('id', $paid->user_id);
+                          $user = $users->where('id', $paid->user_id)->first();
                           @endphp
                         <tr>
-                          <td><span class="text-muted"><a href="{{url('/summary'.$paid->invoice_id)}}">{{$paid->invoice_id}}</a></span></td>
-                          <td><a href="{{url('/summary'.$paid->invoice_id)}}" class="text-inherit">{{$paid->title}}</a></td>
+                          <td><span class="text-muted"><a href="{{url('/summary/'.$paid->invoice_id)}}">{{$paid->invoice_id}}</a></span></td>
+                          <td><a href="{{url('/summary/'.$paid->invoice_id)}}" class="text-inherit">{{$paid->title}}</a></td>
                           <td>{{$paid->price}}</td>
                           <td>{{$paid->total}}</td>
                           <td>{{$paid->van ? $paid->van_hour: '0' }}</td>
@@ -237,8 +237,8 @@
                           <td>{{$paid->summary}}</td>
                           <td>{{$paid->name}}</td>
                           <td>{{$user->email}}</td>
-                          <td>{{$paid->mobile}}</td
-                            <td>{{$paid->company_name}}</td>>
+                          <td>{{$paid->mobile}}</td>
+                            <td>{{$paid->company_name}}</td>
                         </tr>
                           @endforeach
                           {{-- <tr>
@@ -282,7 +282,7 @@
                     <h3 class="card-title">UnPaid Invoices</h3>
                   </div>
                   <div class="table-responsive">
-                    <table class="table" id="data" style="width: 100%;cursor: pointer;" cellspacing="0">
+                    <table class="table text-nowrap" id="data" style="width: 100%;cursor: pointer;" cellspacing="0">
                      {{--  card-table table-vcenter text-nowrap --}}
                       <thead style="width: 100%">
                         <tr>
@@ -298,20 +298,20 @@
                           <th>No of staff</th>
                           <th>Shift Hour</th>
                           <th>Summary</th>
-                          <th>Client Name</th>
-                          <th>Client Email</th>
-                          <th>Client Number</th>
-                          <th>Client Company Name</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Number</th>
+                          <th>Company Name</th>
                         </tr>
                       </thead>
                       <tbody>
                           @foreach($unpaids as $unpaid)
                           @php
-                          $user = $users->where('id', $unpaid->user_id);
+                          $user = $users->where('id', $unpaid->user_id)->first();
                           @endphp
                         <tr>
-                          <td><span class="text-muted"><a href="{{url('/summary'.$unpaid->invoice_id)}}">{{$unpaid->invoice_id}}</a></span></td>
-                          <td><a href="{{url('/summary'.$unpaid->invoice_id)}}" class="text-inherit">{{$unpaid->title}}</a></td>
+                          <td><span class="text-muted"><a href="{{url('/summary/'.$unpaid->invoice_id)}}">{{$unpaid->invoice_id}}</a></span></td>
+                          <td><a href="{{url('/summary/'.$unpaid->invoice_id)}}" class="text-inherit">{{$unpaid->title}}</a></td>
                           <td>{{$unpaid->price}}</td>
                           <td>{{$unpaid->total}}</td>
                           <td>{{$unpaid->van ? $unpaid->van_hour: '0' }}</td>
@@ -323,8 +323,8 @@
                           <td>{{$unpaid->summary}}</td>
                           <td>{{$unpaid->name}}</td>
                           <td>{{$user->email}}</td>
-                          <td>{{$unpaid->mobile}}</td
-                            <td>{{$unpaid->company_name}}</td>>
+                          <td>{{$unpaid->mobile}}</td>
+                          <td>{{$unpaid->company_name}}</td>
                         </tr>
                           @endforeach
                           
@@ -338,7 +338,7 @@
           </div>
         </div>
       </div>
-      <div class="footer">
+      {{-- <div class="footer">
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
@@ -374,11 +374,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
       <footer class="footer">
         <div class="container">
           <div class="row align-items-center flex-row-reverse">
-            <div class="col-auto ml-lg-auto">
+           {{--  <div class="col-auto ml-lg-auto">
               <div class="row align-items-center">
                 <div class="col-auto">
                   <ul class="list-inline list-inline-dots mb-0">
@@ -390,9 +390,9 @@
                   <a href="https://github.com/tabler/tabler" class="btn btn-outline-primary btn-sm">Source code</a>
                 </div>
               </div>
-            </div>
+            </div> --}}
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-              Copyright © 2018 <a href=".">Tabler</a>. Theme by <a href="https://codecalm.net" target="_blank">codecalm.net</a> All rights reserved.
+              Copyright © 2018 <a href=".">CoverShift</a>. Theme by <a href="https://codecalm.net" target="_blank">codecalm.net</a> All rights reserved.
             </div>
           </div>
         </div>

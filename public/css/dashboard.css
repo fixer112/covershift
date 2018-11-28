@@ -18610,5 +18610,6 @@ svg {
   content: "\ea06";
 }
 .card{
-    width: 70%;
+    /*width: 70%;*/
+    display: grid;
 }

@@ -1,4 +1,7 @@
 <!doctype html>
+<!--CoverShift
+Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
+ -->
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">

@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
                     $x_display = $x_array[0] . ((int) $x_array[1][0] !== 0 ? '.' . $x_array[1][0] : '');
                     $x_display .= $x_parts[$x_count_parts - 1];
 
-                    return "<?php echo '£'.$x_display;?>";
+                    return "<?php echo $x_display;?>";
 
               }
 
