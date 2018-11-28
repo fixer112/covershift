@@ -396,15 +396,15 @@ class OrderController extends Controller
     }
 
     public function work(Request $request){
-        $reply = $request->email;
-        $name =  $request->fname.' '.$request->lname;
+        //$reply = $request->email;
+        //$name =  $request->fname.' '.$request->lname;
         $content = 'First Name : '.$request->fname.
                     '<br> Last Name : '.$request->lname.
                     '<br> Email : '.$request->email.
                     '<br> PostCode : '.$request->postcode.
                     '<br> Mobile : '.$request->number.
                     '<br> Specialisation '.$request->service;
-         Mail::to('abula3003@gmail.com')->send(new Work($content, $reply, $name));
+         Mail::to('abula3003@gmail.com')->send(new Work($content));
 
     }
 
