@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             'company_name' => 'Altechtic',
             'mobile' => '23480957833',
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'email' => 'abula3003@gmail.com',
+            'email' => 'abula303@gmail.com',
             'password' => bcrypt('reset'),
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),

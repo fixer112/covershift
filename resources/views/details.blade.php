@@ -182,7 +182,7 @@ Order Service
             <div class="summary">
             <p><span class="name">Service</span> <span class="value">{{str_replace('-', ' ', $service)}}</span></p>
             <p><span class="name">Price per hour</span> <span class="value">£{{$price}}</span></p>
-            <p><span class="name">Total Number of Days</span> <span class="value">@{{days}}</span></p>
+            <p><span class="name">Total Number of Days</span> <span class="value">@{{days_needed}}</span></p>
             <p><span class="name">Total number of staff(s)</span> <span class="value">@{{staff_num}}</span></p>
             <p><span class="name">Summary to Staff</span> <span class="value">@{{summary}}</span></p>
             <p><span class="name">Total number of hour(s) daily</span> <span class="value">@{{hours}}</span></p>
@@ -192,7 +192,7 @@ Order Service
 
         </div>
     </div>
-
+    
         <div class="form-group">
         <button class="btn btn-success">
             Continue

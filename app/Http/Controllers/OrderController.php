@@ -182,7 +182,7 @@ class OrderController extends Controller
     	
 
 
-
+            //if user does not exist, user verifies email first
     		if (!$user->email_verified_at) {
     			$user->update(['verify' => str_random(60)]);
     			$url = url('/verify/'.$user->verify.'/?invoice='.$invoice->id);
@@ -402,7 +402,7 @@ class OrderController extends Controller
                     'email' => 'required|email',
                     'number' => 'required|numeric',
                     'lname' => 'required|string|max:50',
-                    'postcode' => 'required|numeric',
+                    'postcode' => 'required',
                     'service' => 'required',
                     'accept' => 'required|accepted',
                      ]);
