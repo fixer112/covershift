@@ -380,7 +380,13 @@ class OrderController extends Controller
 
     	 $this->reciept->addParagraph("Summary to staff : ".$invoice->summary);
 
-    	 $this->reciept->setFooternote("Team CoverShift");
+         $this->reciept->addParagraph("");
+
+         $this->reciept->addParagraph("");
+
+    	 $this->reciept->addParagraph("If you have an update or correction for this order or would rather pay through an invoice, please send us a  mail vias helpinghands@cover-shift.co.uk");
+
+         $this->reciept->setFooternote("Team CoverShift");
 
     	 /*if ($type == 'F') {
     	 	
@@ -392,6 +398,7 @@ class OrderController extends Controller
 
     	 $this->reciept->render(public_path('/reciept/'.$invoice->invoice_id.'.pdf'),'F');
     	 //$this->reciept->render($invoice->invoice_id.'.pdf',$type);
+         //return redirect('download/'.$invoice->invoice_id);
     	 
     }
 
