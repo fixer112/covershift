@@ -116,12 +116,19 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
 </div>
 
 <div class="footer">
+    <div class="paypal d-none d-sm-block">
+        <img src="{{asset('/paypal.jpeg')}}" alt="" style="float: left;height: 50px;width: 100px">
+    </div>
     <div class="copyright d-none d-sm-block">
         ©2016 CoverShift: 34 New House, 67-68 Hatton Garden, London, EC1N 8JY UK.
     </div>
 
      <div class="copyright d-sm-none">
         ©2016 CoverShift: <br> 34 New House, <br> 67-68 Hatton Garden, <br> London,<br> EC1N 8JY <br> United Kingdom.
+    </div>
+
+    <div class="paypal d-sm-none">
+        <img src="{{asset('/paypal.jpeg')}}" alt="" class="mx-auto" style="height: 50px;width: 100px">
     </div>
     
     {{-- <div class="feature">

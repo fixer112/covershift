@@ -210,3 +210,6 @@ input[type="checkbox"], input[type="radio"] {
     font-size: xx-small;
 }
 }
+.paypal img{
+    display: block;
+}
