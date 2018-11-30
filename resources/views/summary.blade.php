@@ -8,6 +8,7 @@ Summary for #{{$invoice->invoice_id}}
 <div class="col-12 mx-auto">
 	<div class="alert alert-success">
 		<div class="row">
+
 			<div class="mx-auto">
 				<h2>Summary</h2> <br> <span style="font-weight: bold"> #{{$invoice->invoice_id}}</span> <br> <span style="font-size: 10px;font-weight: bold">From {{$invoice->from}} To {{$invoice->to}}</span>
 			</div>
@@ -30,6 +31,9 @@ Summary for #{{$invoice->invoice_id}}
 			<p><span class="name">Total Cost</span><span class="value total"> £{{$invoice->total}}</span></p>
 
 		</div>
+	</div>
+	<div class="alert alert-warning">
+	<p><center><strong>If you have an update or correction for this order or would rather pay through an invoice, please send us a <a href="mailto:helpinghands@cover-shift.co.uk"> mail</a>. Thank you.</strong></center></p>
 	</div>
 	@if($invoice->paid())
 	<a href="{{url('/reciept/'.$invoice->invoice_id.'.pdf')}}"><button class="btn btn-success">

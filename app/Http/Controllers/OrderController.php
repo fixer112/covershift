@@ -129,7 +129,7 @@ class OrderController extends Controller
     			'email' => $request->email,
     			'company_name' => $request->company_name,
     			'mobile' => $request->mobile,
-    			'password' => 'reset',
+    			'password' => bcrypt('reset'),
     		]);
 
     		}else{
@@ -380,7 +380,7 @@ class OrderController extends Controller
 
     	 $this->reciept->addParagraph("Summary to staff : ".$invoice->summary);
 
-    	 $this->reciept->setFooternote("CoverShift");
+    	 $this->reciept->setFooternote("Team CoverShift");
 
     	 /*if ($type == 'F') {
     	 	
