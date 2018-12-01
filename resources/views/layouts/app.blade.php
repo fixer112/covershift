@@ -40,7 +40,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
 
               <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/')}}">Home</a>
+                <a class="nav-link" href="{{url('')}}/">Home</a>
             </li>
             <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/hire')}}">Hire Full Time Staff </a>
@@ -80,7 +80,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
     $(document).ready(function() {
       $('li.active').removeClass('active');
       $('a[href="' + url + location.pathname + '"]').closest('li').addClass('active'); 
-      if (location.origin == home) {$('a[href="'+home+'"]').closest('li').addClass('active'); }
+      //if (location.protocol+"//"+location.host == home) {$('a[href="'+home+'"]').closest('li').addClass('active'); }
       //console.log(location);
   });
 
