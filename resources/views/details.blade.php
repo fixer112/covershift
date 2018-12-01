@@ -63,8 +63,8 @@ Order Service
     <div class="form-group{{ $errors->has('company_name') ? ' has-error' : '' }}">
 
         <div class="input">
-            <label for="company_name" class="control-label">Company name</label>
-            <input type="text" class="form-control" name="company_name" value="{{ old('company_name') }}"required autofocus>
+            <label for="company_name" class="control-label">Company name (optional)</label>
+            <input type="text" class="form-control" name="company_name" value="{{ old('company_name') }}">
         </div>
     </div>
 

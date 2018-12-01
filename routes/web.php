@@ -43,6 +43,10 @@ Route::get('/cancel', function () {
     return view('cancel');
 });
 
+Route::get('/work_for_us', function () {
+    return view('work');
+});
+
 Route::get('/download/{invoice}', function ($invoice) {
 	return response()->file(public_path('/reciept/'.$invoice.'.pdf'));
   	//return redirect('/');

@@ -51,6 +51,9 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
             <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/contact')}}">Contact </a>
             </li>
+            <li class="nav-item menu-link">
+                <a class="nav-link" href="{{url('/work_for_us')}}">Work For Us </a>
+            </li>
             
       {{-- <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
@@ -120,11 +123,11 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
         <img src="{{asset('/paypal.jpeg')}}" alt="" style="float: left;height: 50px;width: 100px">
     </div>
     <div class="copyright d-none d-sm-block">
-        ©2016 CoverShift: 34 New House, 67-68 Hatton Garden, London, EC1N 8JY UK.
+        ©2016 CoverShift: 34 New House, 67-68 Hatton Garden, London, EC1N 8JY, United Kingdom.
     </div>
 
      <div class="copyright d-sm-none">
-        ©2016 CoverShift: <br> 34 New House, <br> 67-68 Hatton Garden, <br> London,<br> EC1N 8JY <br> United Kingdom.
+        ©2016 CoverShift: <br> 34 New House, <br> 67-68 Hatton Garden, <br> London,<br> EC1N 8JY, <br> United Kingdom.
     </div>
 
     <div class="paypal d-sm-none">
