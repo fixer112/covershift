@@ -49,6 +49,7 @@ header li a:hover, footer li a:hover {
     font-weight: bolder;
     color: blue;
     font-size: initial;
+    text-align: center;
 }
 .half-sub{
 	font-size: 14px;
@@ -167,6 +168,9 @@ label.control-label {
 
     font-size: xx-large;
 
+}
+.menu-link{
+    font-weight: bold;
 }
 @media (min-width:992px){
     .menu-link {

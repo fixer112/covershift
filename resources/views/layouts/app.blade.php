@@ -75,9 +75,13 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
 </div>
 
 <script>
+    var url = "{{url('/')}}";
+    var home = "{{url('')}}";
     $(document).ready(function() {
       $('li.active').removeClass('active');
-      $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
+      $('a[href="' + url + location.pathname + '"]').closest('li').addClass('active'); 
+      if (location.origin == home) {$('a[href="'+home+'"]').closest('li').addClass('active'); }
+      //console.log(location);
   });
 
 </script>

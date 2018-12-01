@@ -407,6 +407,7 @@ class OrderController extends Controller
                     'fname' => 'required|string|max:50',
                     'email' => 'required|email',
                     'number' => 'required|numeric',
+                    'addr' => 'required|string|max:100',
                     'lname' => 'required|string|max:50',
                     'postcode' => 'required',
                     'service' => 'required',
@@ -418,6 +419,7 @@ class OrderController extends Controller
         $content = 'First Name : '.$request->fname.
                     '<br> Last Name : '.$request->lname.
                     '<br> Email : '.$request->email.
+                    '<br> Address : '.$request->addr.
                     '<br> PostCode : '.$request->postcode.
                     '<br> Mobile : '.$request->number.
                     '<br> Specialisation '.$request->service;
