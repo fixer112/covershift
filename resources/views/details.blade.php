@@ -52,6 +52,14 @@ Order Service
         </div>
     </div>
 
+    <div class="form-group{{ $errors->has('addr') ? ' has-error' : '' }}">
+
+                        <div class="input">
+                            <label for="addr" class="control-label">Full Address of Work Venue</label>
+                            <input type="text" class="form-control" name="addr" value="{{ old('addr') }}"required autofocus>
+                        </div>
+                    </div
+
      <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
 
         <div class="input">

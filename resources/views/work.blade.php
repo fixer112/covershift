@@ -52,13 +52,13 @@ Work for us
                     </div>
                 </div>
 
-                <div class="form-group{{ $errors->has('addr') ? ' has-error' : '' }}">
+                {{-- <div class="form-group{{ $errors->has('addr') ? ' has-error' : '' }}">
 
                     <div class="input">
                         <label for="addr" class="control-label">Full Address of Work Venue</label>
                         <input type="text" class="form-control" name="addr" value="{{ old('addr') }}"required autofocus>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="form-group{{ $errors->has('postcode') ? ' has-error' : '' }}">
 

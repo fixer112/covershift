@@ -99,6 +99,7 @@ class OrderController extends Controller
 
     				'service' => 'required|string|max:50',
                     'email' => 'required|email',
+                    'addr' => 'required|string|max:100',
 		            'mobile' => 'required|numeric',
 		            'price' => 'required',
 		            'van' => 'required',
@@ -129,15 +130,17 @@ class OrderController extends Controller
     			'company_name' => $request->company_name,
     			'mobile' => $request->mobile,
     			'password' => bcrypt('reset'),
+                'address' => $request->addr,
     		]);
 
     		}else{
     			$user->update([
-    				'fname' => $request->fname,
+    			'fname' => $request->fname,
     			'lname' => $request->lname,
     			'email' => $request->email,
     			'company_name' => $request->company_name,
     			'mobile' => $request->mobile,
+                'address' => $request->addr,
     			]);
     		}
     		
@@ -162,6 +165,7 @@ class OrderController extends Controller
             'email' => $request->email,
             'company_name' => $request->company_name,
             'mobile' => $request->mobile,
+            'address' => $request->addr,
     	]);
 
     	$invoice->update([
@@ -387,6 +391,8 @@ class OrderController extends Controller
 
     	 $this->reciept->addParagraph("Dates : ".$invoice->dates);
 
+         $this->reciept->addParagraph("Address of work venue : ".$invoice->address);
+
     	 $this->reciept->addParagraph("Summary to staff : ".$invoice->summary);
 
          $this->reciept->addParagraph("");
@@ -417,7 +423,7 @@ class OrderController extends Controller
                     'fname' => 'required|string|max:50',
                     'email' => 'required|email',
                     'number' => 'required|numeric',
-                    'addr' => 'required|string|max:100',
+                    //'addr' => 'required|string|max:100',
                     'lname' => 'required|string|max:50',
                     'postcode' => 'required',
                     'service' => 'required',
@@ -429,7 +435,7 @@ class OrderController extends Controller
         $content = 'First Name : '.$request->fname.
                     '<br> Last Name : '.$request->lname.
                     '<br> Email : '.$request->email.
-                    '<br> Address : '.$request->addr.
+                    //'<br> Address : '.$request->addr.
                     '<br> PostCode : '.$request->postcode.
                     '<br> Mobile : '.$request->number.
                     '<br> Specialisation '.$request->service;

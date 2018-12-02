@@ -216,6 +216,7 @@
                           <th>Email</th>
                           <th>Number</th>
                           <th>Company Name</th>
+                          <th>Work Address</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -239,6 +240,7 @@
                           <td>{{$user->email}}</td>
                           <td>{{$paid->mobile}}</td>
                             <td>{{$paid->company_name}}</td>
+                            <td>{{$paid->address}}</td>
                         </tr>
                           @endforeach
                           {{-- <tr>
@@ -302,6 +304,7 @@
                           <th>Email</th>
                           <th>Number</th>
                           <th>Company Name</th>
+                          <th>Work Address</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -325,6 +328,7 @@
                           <td>{{$user->email}}</td>
                           <td>{{$unpaid->mobile}}</td>
                           <td>{{$unpaid->company_name}}</td>
+                          <td>{{$unpaid->address}}</td>
                         </tr>
                           @endforeach
                           
