@@ -44,7 +44,31 @@ Summary for #{{$invoice->invoice_id}}
 		Continue
 	</button></a>
 	@endif
-
+	
 </div>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="helpinghands@cover-shift.co.uk">
+
+  <!-- Specify a Buy Now button. -->
+  <input type="hidden" name="cmd" value="_xclick">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="{{$invoice->description}}">
+  <input type="hidden" name="item_number" value="{{$invoice->invoice_id}}">
+  <input type="hidden" name="amount" value="{{$invoice->total}}">
+  <input type="hidden" name="currency_code" value="GBP">
+  <input type="hidden" name="cancel_return" value="{{url('/cancel')}}">
+  <input type="hidden" name="return" value="{{url('/success')}}">
+  <!-- Display the payment button. -->
+  <input type="image" name="submit" border="0"
+  src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+  alt="Buy Now">
+  <img alt="" border="0" width="1" height="1"
+  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+
+</form>
+
 
 @endsection
