@@ -35,7 +35,7 @@ class CreateInvoicesTable extends Migration
             $table->string('company_name');
             $table->string('mobile');
             $table->string('name');
-            $table->string('address');
+            $table->string('address')->nullable();
 
 
             $table->timestamps();
