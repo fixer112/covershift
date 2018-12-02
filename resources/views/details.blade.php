@@ -58,7 +58,7 @@ Order Service
                             <label for="addr" class="control-label">Full Address of Work Venue</label>
                             <input type="text" class="form-control" name="addr" value="{{ old('addr') }}"required autofocus>
                         </div>
-                    </div
+                    </div>
 
      <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
 
