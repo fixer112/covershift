@@ -80,8 +80,6 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
     $(document).ready(function() {
       $('li.active').removeClass('active');
       $('a[href="' + url + location.pathname + '"]').closest('li').addClass('active'); 
-      //if (location.protocol+"//"+location.host == home) {$('a[href="'+home+'"]').closest('li').addClass('active'); }
-      //console.log(location);
   });
 
 </script>

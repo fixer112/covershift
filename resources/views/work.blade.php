@@ -24,11 +24,11 @@ Work for us
     </div>
             <h3 class="half-head">WORK FOR US</h3>
 
-            <p class="half-sub">Work when you want <br> Earn £8 - £10.50</p>
+            <p class="half-sub">Work when you want <br> </p>
 
             <form {{-- v-on:keydown.enter.prevent.self --}} class="form-horizontal" method="POST" action="/work">
                 {{ csrf_field() }}
-                <div class="form-group{{ $errors->has('fname') ? ' has-error' : '' }}">
+                <div class="form-group{{ $errors->has('fname') ? ' has-error' : '' }} mx-auto">
 
                     <div class="input">
                         <label for="fname" class="control-label">First Name</label>

@@ -312,6 +312,16 @@ class OrderController extends Controller
     		$invoice = Invoice::find($request->invoice);
 
     	if ($invoice) {
+
+            $subject = 'Order #'.$invoice->invoice_id;
+            $msg = 'Order #'.$invoice->invoice_id.' successfully booked, please click the link below to continue with payment';
+            $url = url('summary/'.$invoice->invoice_id);
+            try {
+                
+            $user->notify(new OrderBooked($user->fname, $subject, $msg,'Continue Payment', $url ));
+            } catch (Exception $e) {
+                Log::error($e);
+            }
     			/*if ($invoice->paid()) {
     				$request->session()->flash('failed', 'Payment has already been made for this InvoiceID. # '.$invoice->invoice_id);
     	        return redirect('/');
