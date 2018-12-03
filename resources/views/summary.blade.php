@@ -33,42 +33,28 @@ Summary for #{{$invoice->invoice_id}}
 		</div>
 	</div>
 	<div class="alert alert-warning">
-	<p><center><strong>If you have an update or correction for this order or would rather pay through an invoice, please send us a <a href="mailto:helpinghands@cover-shift.co.uk"> mail</a>. Thank you.</strong></center></p>
+		<p><center><strong>If you have an update or correction for this order or would rather pay through an invoice, please send us a <a href="mailto:helpinghands@cover-shift.co.uk"> mail</a>. Thank you.</strong></center></p>
 	</div>
-	@if($invoice->paid())
-	<a href="{{url('/reciept/'.$invoice->invoice_id.'.pdf')}}"><button class="btn btn-success">
-		Download receipt
-	</button>
-	@else
-	<a href="{{url('/make_payment/'.$invoice->id)}}"><button class="btn btn-success">
-		Continue
-	</button></a>
-	@endif
+	
+		
+			@if($invoice->paid())
+			<a href="{{url('/reciept/'.$invoice->invoice_id.'.pdf')}}"><button class="btn btn-success">
+				Download receipt
+			</button></a>
+		
+			@else
+		<div>
+			<a href="{{url('/make_payment/'.$invoice->id)}}"><button class="btn btn-success" style="float: left;">
+				Continue
+			</button></a>
+			@endif
+			<img src="{{ asset('/paypal_pay.jpeg')}}" alt="" style="height: 80px;width: 100px; float: right;">
+
+		</div>
+	
 	
 </div>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
-  <!-- Identify your business so that you can collect the payments. -->
-  <input type="hidden" name="business" value="helpinghands@cover-shift.co.uk">
-
-  <!-- Specify a Buy Now button. -->
-  <input type="hidden" name="cmd" value="_xclick">
-
-  <!-- Specify details about the item that buyers will purchase. -->
-  <input type="hidden" name="item_name" value="{{$invoice->description}}">
-  <input type="hidden" name="item_number" value="{{$invoice->invoice_id}}">
-  <input type="hidden" name="amount" value="{{$invoice->total}}">
-  <input type="hidden" name="currency_code" value="GBP">
-  <input type="hidden" name="cancel_return" value="{{url('/cancel')}}">
-  <input type="hidden" name="return" value="{{url('/success')}}">
-  <!-- Display the payment button. -->
-  <input type="image" name="submit" border="0"
-  src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
-  alt="Buy Now">
-  <img alt="" border="0" width="1" height="1"
-  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
-
-</form>
 
 
 @endsection

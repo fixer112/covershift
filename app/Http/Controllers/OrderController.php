@@ -305,7 +305,7 @@ class OrderController extends Controller
     }
 
     public function verify_user(Request $request, $verify){
-    	$user = User::where('verify', $verify);
+    	$user = User::where('verify', $verify)->first();
     	if ($user) {
     		$user->update(['email_verified_at' => Carbon::now(), 'verify' => '']);
     	}else{
