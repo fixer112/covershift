@@ -141,10 +141,19 @@ Order Service
         <div class="form-group">
             <label class="control-label">Numbers of hours for each shift</label>
             <select name="shift_hour" class="form-control" v-model="hours" @change="cal" required>
+               {{--  <option selected="true" disabled value="">Select Hour</option> --}}
                 @php
                 $num = 4;
+                $services = ['SIA-Security', 'Postroom-Assistant', 'Facilities-Assistant', 'Office-Porter'];
                 while ($num <= 12) {
+                    if ($num == 4) {
+                        if (in_array($service, $services)) {
+                        $num++ ;
+                        continue;
+                        }
+                    }
                     echo'<option value="'.$num.'">'.$num.'</option>';
+                    
                     $num++ ;
                 }
                 @endphp
@@ -248,6 +257,25 @@ Order Service
             this.cal();
             ///alert('work');
         },
+        disable_hour(){
+            if ("{{$service}}" == "SIA-Security") {}
+                switch ("{{$service}}") {
+                    case "SIA-Security":
+                        this.hours =5;
+                        break;
+                     case "Office-Porter":
+                        this.hours =5;
+                        break;
+                    case "Postroom-Assistant":
+                        this.hours =5;
+                        break;
+                        case "Facilities-Assistant":
+                        this.hours =5;
+                        break;
+                    default:
+                        break;
+                }
+        },
         cal(){
             var van = this.van == 1 ? this.van_hour : 1;
             this.total = this.price * this.hours * this.days_needed * this.staff_num * van;
@@ -306,6 +334,7 @@ mounted(){
     //$('#picker').multiDatesPicker();
     this.price = {{$price}};
     this.cal();
+    this.disable_hour();
 },
 created(){
     //$("#date").multiDatesPicker();
