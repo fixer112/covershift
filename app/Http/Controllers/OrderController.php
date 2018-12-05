@@ -95,6 +95,7 @@ class OrderController extends Controller
     	//$this->provider = new ExpressCheckout;      // To use express checkout.
     	//$provider = new AdaptivePayments;     // To use adaptive payments.
     	//return $request->all();
+        $company = $request->company_name ? $request->company_name : ' ';
     	$this->validate($request, [
 
     				'service' => 'required|string|max:50',
@@ -127,7 +128,7 @@ class OrderController extends Controller
     			'fname' => $request->fname,
     			'lname' => $request->lname,
     			'email' => $request->email,
-    			'company_name' => $request->company_name,
+    			'company_name' => $company,
     			'mobile' => $request->mobile,
     			'password' => bcrypt('reset'),
                 'address' => $request->addr,
@@ -138,7 +139,7 @@ class OrderController extends Controller
     			'fname' => $request->fname,
     			'lname' => $request->lname,
     			'email' => $request->email,
-    			'company_name' => $request->company_name,
+    			'company_name' => $company,
     			'mobile' => $request->mobile,
                 'address' => $request->addr,
     			]);
@@ -163,7 +164,7 @@ class OrderController extends Controller
     		'total' => $request->total,
             'name' => $request->fname.' '.$request->lname,
             'email' => $request->email,
-            'company_name' => $request->company_name,
+            'company_name' => $company,
             'mobile' => $request->mobile,
             'address' => $request->addr,
     	]);
