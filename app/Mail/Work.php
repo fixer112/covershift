@@ -12,18 +12,18 @@ class Work extends Mailable
     use Queueable, SerializesModels;
     public $content;
     //public $reply;
-    //public $name;
+    public $sub;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($content)
+    public function __construct($content, $sub = 'New Client Applied To Work')
     {
         //
         $this->content = $content;
         //$this->reply = $reply;
-        //$this->name = $name;
+        $this->sub = $sub;
     }
 
     /**
@@ -33,7 +33,7 @@ class Work extends Mailable
      */
     public function build()
     {
-        return $this->subject('New Client Applied To Work')
+        return $this->subject($this->sub)
                     ->view('email.work');
     }
 }

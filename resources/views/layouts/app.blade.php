@@ -28,7 +28,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
 <body>
     <header id="header" class="">
         <div>
-            <img src="{{ asset('/Covershift.jpg')}}" alt="" width="100%" height="100%">
+            <img src="{{asset('/Covershift.jpg')}}" alt="" width="100%" height="100%" ref="header">
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,6 +53,9 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
             </li>
             <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/work_for_us')}}">Work For Us </a>
+            </li>
+            <li class="nav-item menu-link">
+                <a class="nav-link" href="{{url('/kec')}}">Kitchen Equipment Cleaning</a>
             </li>
             
       {{-- <li class="nav-item">

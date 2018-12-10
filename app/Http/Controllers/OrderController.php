@@ -447,6 +447,26 @@ class OrderController extends Controller
 
     }
 
+    public function kecMail(Request $request){
+        $this->validate($request, [
+                    'name' => 'required|string|max:50',
+                    'email' => 'required|email|confirmed',
+                    'number' => 'required|numeric',
+                    'request' => 'required|max:500',
+                     ]);
+
+        //$reply = $request->email;
+        //$name =  $request->fname.' '.$request->lname;
+        $content = 'Name : '.$request->name.
+                    '<br> Email : '.$request->email.
+                    '<br> Contact Number : '.$request->number.
+                    '<br> Request '.$request->request;
+         Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content, 'New Client Applied To Kitchen Equipment Cleaning'));
+
+                $request->session()->flash('success', 'Email sent Successfully. We will get back to you soon');
+                 return view('/alert');
+    }
+
 
     
 }

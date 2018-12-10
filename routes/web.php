@@ -47,6 +47,10 @@ Route::get('/work_for_us', function () {
     return view('work');
 });
 
+Route::get('/kec', function () {
+    return view('KEC');
+});
+
 Route::get('/download/{invoice}', function ($invoice) {
 	return response()->file(public_path('/reciept/'.$invoice.'.pdf'));
   	//return redirect('/');
@@ -61,6 +65,7 @@ Route::post('/payment', 'OrderController@payment')->name('payment');
 Route::get('/success', 'OrderController@success')->name('success');
 Route::get('/verify/{verify}', 'OrderController@verify_user')->name('verify');
 Route::get('/book_staff/{service}', 'OrderController@book')->name('book');
+Route::post('/kec-mail', 'OrderController@kecMail')->name('payment');
 
 //Auth::routes();
 
