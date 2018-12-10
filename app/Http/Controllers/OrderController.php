@@ -452,7 +452,7 @@ class OrderController extends Controller
                     'name' => 'required|string|max:50',
                     'email' => 'required|email|confirmed',
                     'number' => 'required|numeric',
-                    'request' => 'required|max:500',
+                    'req' => 'required|max:500',
                      ]);
 
         //$reply = $request->email;
@@ -460,7 +460,7 @@ class OrderController extends Controller
         $content = 'Name : '.$request->name.
                     '<br> Email : '.$request->email.
                     '<br> Contact Number : '.$request->number.
-                    '<br> Request '.$request->request;
+                    '<br> Request : '.$request->req;
          Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content, 'New Client Applied To Kitchen Equipment Cleaning'));
 
                 $request->session()->flash('success', 'Email sent Successfully. We will get back to you soon');

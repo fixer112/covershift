@@ -53,11 +53,11 @@ Kitchen Equipment Cleaning
 	        </div>
 	    </div>
 
-	    <div class="form-group{{ $errors->has('request') ? ' has-error' : '' }}">
+	    <div class="form-group{{ $errors->has('req') ? ' has-error' : '' }}">
 
 	        <div class="input">
-	            <label for="request" class="control-label">Request</label>
-	            <textarea name="request" class="form-control" required autofocus>{{ old('request') }}</textarea>{{-- 
+	            <label for="req" class="control-label">Request</label>
+	            <textarea name="req" class="form-control" required autofocus>{{ old('req') }}</textarea>{{-- 
 	            <input type="text" class="form-control" name="request" value="{{ old('request') }}"required autofocus> --}}
 	        </div>
 	    </div>
