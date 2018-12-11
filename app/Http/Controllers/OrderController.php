@@ -451,7 +451,7 @@ class OrderController extends Controller
         $this->validate($request, [
                     'name' => 'required|string|max:50',
                     'email' => 'required|email|confirmed',
-                    'number' => 'required|numeric',
+                    //'number' => 'required|numeric',
                     'req' => 'required|max:500',
                      ]);
 
@@ -459,7 +459,7 @@ class OrderController extends Controller
         //$name =  $request->fname.' '.$request->lname;
         $content = 'Name : '.$request->name.
                     '<br> Email : '.$request->email.
-                    '<br> Contact Number : '.$request->number.
+                    //'<br> Contact Number : '.$request->number.
                     '<br> Request : '.$request->req;
          Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content, 'New Client Applied To Kitchen Equipment Cleaning'));
 
