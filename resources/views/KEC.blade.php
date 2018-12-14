@@ -26,18 +26,19 @@
     <div class="container">
     <div id="app" class="row">
     <div class="col-12 mx-auto">
-        <p style="color: blue;text-align: center;font-size: 16px">Thanks for visiting our Kitchen Equipment & Kitchen Deep Clean Page</p>
-        <p style="text-align: center;"><span style="color: red;font-size: 18px">CoverShift Cleaning Services</span> <br> 
-        34 New House, 67-68 Hatton Garden, London, EC1N 8JY, United Kingdom</p>
+        <p style="color: blue;text-align: center;font-size: 20px">Thanks for visiting our Kitchen Equipment & Kitchen Deep Clean Page</p>
+        <p style="text-align: center;">@</p>
+        <p style="text-align: center;"><span style="color: red;font-size: 25px">CoverShift Cleaning Services</span> <br> 
+        34 New House, Hatton Garden, London, EC1N 8JY, United Kingdom<br> Tel: 020 333 2015</p>
 
         <div class="row">
             <div class="col-6 client">
                 <img src="{{ asset('/kec1.jpeg')}}" alt="">
-                <p style="font-size: 14px">Kitchen Equipment Deep Clean</p>
+                <p style="font-size: 14px;text-align: center;">Kitchen Equipment Deep Clean</p>
             </div>
             <div class="col-6 client">
                 <img src="{{ asset('/kec2.jpeg')}}" alt="">
-                <p style="font-size: 14px">Fryers, Grills & Ovens</p>
+                <p style="font-size: 14px;text-align: center;">Fryers, Grills & Ovens</p>
             </div>
             {{-- <div class="col-3 client">
                 <img src="{{ asset('/kec3.jpeg')}}" alt="">
@@ -47,8 +48,8 @@
             </div> --}}
         </div>
         <div style="margin-top: 30px;border: solid 2px red;border-radius: 5px;">
-            <p style="font-size: 14px">We are UK's best hands in:</p> 
-            <ul style="font-size: 15px">
+            <p style="font-size: 17px;color: red;font-weight: bold;margin-left: 25px">OUR KITCHEN<br> DEEP CLEANING OFFERS:</p> 
+            <ul style="font-size: 17px">
                 <li>Deep cleaning accumulated grease and fat on commercial and domestic kitchen equipment.</li>
                 <li>Kitchen ventilation clean.</li>
                 <li>Deep clean less accessible  surfaces and fittings to rid your kitchen of any  potential breeding ground for bacteria.</li>
@@ -56,13 +57,14 @@
         </div>
 
         <div style="margin-top: 30px">
-            <p style="font-size: 14px">Full certification provided for regulatory and insurance purposes. This keeps you inline with the Hygiene Standards set out by the Food Safety Act 1990 and the Food Hygiene Regulations 2006.</p>
+            <p style="font-size: 14px">Full certification will be provided for regulatory and insurance purposes. This keeps you inline with the Hygiene Standards set out by the Food Safety Act 1990 and the Food Hygiene Regulations 2006.</p>
 
         <p style="color: blue">Our rates are affordable and negotiable. We operate with minimum disruption to your schedule.</p>
 
         <p style="color: green">Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: helpinghands@cover-shift.co.uk </p>
     </div>
-
+    <div>
+        <h2 style="text-align: center;text-align: center;font-weight: bold;margin-top: 50px;color: red;">CONTACT FORM</h2>
         <form {{-- v-on:keydown.enter.prevent.self --}} class="form-horizontal" method="POST" action="/kec-mail">
             {{ csrf_field() }}
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} mx-auto">
@@ -111,6 +113,7 @@
                 Send
             </button>
         </form>
+    </div>
 
         @if (count($errors) > 0)
         <div class="alert alert-danger">

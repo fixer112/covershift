@@ -50,6 +50,9 @@ Route::get('/work_for_us', function () {
 Route::get('/kec', function () {
     return view('KEC');
 });
+Route::get('/kec2', function () {
+    return view('KEC2');
+});
 
 Route::get('/download/{invoice}', function ($invoice) {
 	return response()->file(public_path('/reciept/'.$invoice.'.pdf'));

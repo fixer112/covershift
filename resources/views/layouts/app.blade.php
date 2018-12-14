@@ -55,7 +55,10 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
                 <a class="nav-link" href="{{url('/work_for_us')}}">Work For Us </a>
             </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/kec')}}">Kitchen Equipment Cleaning</a>
+                <a class="nav-link" href="{{url('/kec')}}">KEC</a>
+            </li>
+            <li class="nav-item menu-link">
+                <a class="nav-link" href="{{url('/kec2')}}">KEC2</a>
             </li>
             
       {{-- <li class="nav-item">
