@@ -26,9 +26,10 @@
     <div class="container">
     <div id="app" class="row">
     <div class="col-12 mx-auto">
-        <p style="color: blue;text-align: center;font-size: 20px">Thanks for visiting our Kitchen Equipment & Kitchen Deep Clean Page</p>
+        <p style="color: blue;text-align: center;font-size: 20px">Thanks for visiting our Kitchen Equipment & Kitchen Deep Clean Contact Page</p>
         <p style="text-align: center;">@</p>
-        <p style="text-align: center;"><span style="color: red;font-size: 25px">CoverShift Cleaning Services</span> <br> 
+        <p style="text-align: center;"><span style="color: red;font-size: 25px">CoverShift Cleaning Services</span> <br>
+        <span>(A division of CoverShift: www.cover-shift.co.uk)</span><br> 
         34 New House, Hatton Garden, London, EC1N 8JY, United Kingdom<br> Tel: 020 333 2015</p>
 
         <div class="row">
@@ -47,8 +48,8 @@
                 <img src="{{ asset('/kec4.jpeg')}}" alt="">
             </div> --}}
         </div>
-        <div style="margin-top: 30px;border: solid 2px red;border-radius: 5px;">
-            <p style="font-size: 17px;color: red;font-weight: bold;margin-left: 25px">OUR KITCHEN<br> DEEP CLEANING OFFERS:</p> 
+            <h3 style="color: red;font-weight: bold;margin-top: 30px;">OUR KITCHEN DEEP CLEANING OFFERS</h3> 
+        <div style="border: solid 2px red;border-radius: 5px;">
             <ul style="font-size: 17px">
                 <li>Deep cleaning accumulated grease and fat on commercial and domestic kitchen equipment.</li>
                 <li>Kitchen ventilation clean.</li>
@@ -56,15 +57,16 @@
             </ul>
         </div>
 
-        <div style="margin-top: 30px">
-            <p style="font-size: 14px">Full certification will be provided for regulatory and insurance purposes. This keeps you inline with the Hygiene Standards set out by the Food Safety Act 1990 and the Food Hygiene Regulations 2006.</p>
+        <div style="margin-top: 30px;font-size: 16px">
+            <p style="">Full certification will be provided for regulatory and insurance purposes. This keeps you inline with the Hygiene Standards set out by the Food Safety Act 1990 and the Food Hygiene Regulations 2006.</p>
 
         <p style="color: blue">Our rates are affordable and negotiable. We operate with minimum disruption to your schedule.</p>
 
         <p style="color: green">Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: helpinghands@cover-shift.co.uk </p>
     </div>
-    <div>
-        <h2 style="text-align: center;text-align: center;font-weight: bold;margin-top: 50px;color: red;">CONTACT FORM</h2>
+    <div class="col-10 mx-auto">
+        <h4 style="text-align: center;text-align: center;font-weight: bold;margin-top: 50px;color: red;">CONTACT FORM</h4>
+        <div style="" class="half">
         <form {{-- v-on:keydown.enter.prevent.self --}} class="form-horizontal" method="POST" action="/kec-mail">
             {{ csrf_field() }}
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} mx-auto">
@@ -100,20 +102,20 @@
                 </div>
             </div>
 
-            {{-- <div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
+            <div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
 
                 <div class="input">
-                    <label for="number" class="control-label">Contact Number</label>
-                    <input type="text" class="form-control" name="number" value="{{ old('number') }}"required autofocus>
+                    <label for="number" class="control-label">Contact Number (Optional)</label>
+                    <input type="text" class="form-control" name="number" value="{{ old('number') }}" autofocus>
                 </div>
-            </div> --}}
+            </div>
 
             
             <button type="submit" class="btn btn-success">
                 Send
             </button>
         </form>
-    </div>
+    
 
         @if (count($errors) > 0)
         <div class="alert alert-danger">
@@ -125,6 +127,8 @@
             </ul>
         </div>
         @endif
+    </div>
+    </div>
     </div>
 </div>
 </div>

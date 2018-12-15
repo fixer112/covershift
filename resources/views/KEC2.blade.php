@@ -21,6 +21,9 @@
     <link href="https://fonts.googleapis.com/css?family=Anton:200,600" rel="stylesheet" type="text/css">
     <title>Kitchen Equipment Cleaning</title>
     <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+        .row{margin-bottom: -90px;}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -28,22 +31,27 @@
             <div class="col-12 mx-auto">
                 <div class="row">
 
-                    <div class="col-md-6" style="margin-bottom: 0px">
-                     <p><span style="color: blue;font-size: 20px">Thanks for visiting our </span><br>
-                        <span style="color: blue;font-size: 20px;font-weight: bold;">Kitchen Equipment <br>& Kitchen Deep Clean Page</span></p>
+                    <div class="col-6" style="margin-bottom: 0px">
+                     <p style="text-align: center;margin-top: 20%;"><span style="color: blue;font-size: 20px">Thanks for visiting our </span><br>
+                        <span style="color: blue;font-size: 20px;font-weight: bold;">Kitchen Equipment <br>& Kitchen Deep Clean Contact Page</span><br>
+                    </p>
+                        <p style="font-size: 25px;font-weight: bold;text-align: center;margin-top: 15%">@</p>
+
                     </div>
 
-                    <div class="col-md-6 client" style="margin-bottom: 0px">
-                        <img src="{{ asset('/kec1.jpeg')}}" alt="" style="height: 50%">
+                    <div class="col-6 client" style="margin-bottom: 0px">
+                        <img src="{{ asset('/kec1.jpeg')}}" alt="" style="height: 70%">
                         <p style="font-size: 14px;text-align: center;">Kitchen Equipment Deep Clean</p>
+
                     </div>
 
-                </div>
+               
 
-                <div class="row">
-
-                    <div class="col-md-6" style="margin-bottom: 0px">
-                     <p style=""><span style="color: red;font-size: 25px">CoverShift Cleaning Services</span> <br> 
+                    <div class="col-6" style="margin-bottom: 0px">
+                     <p style="text-align: center;"><span style="color: red;font-size: 25px">CoverShift Cleaning Services</span> 
+                        <br>
+                        <span>(A division of CoverShift: www.cover-shift.co.uk)</span>
+                        <br> 
                          34 New House, <br>
                          Hatton Garden,<br>
                          London, EC1N 8JY,<br>
@@ -51,26 +59,24 @@
                      </div>
 
 
-                     <div class="col-md-6 client" style="margin-bottom: 0px">
-                         <img src="{{ asset('/kec2.jpeg')}}" alt="" style="height: 50%">
+                     <div class="col-6 client" style="margin-bottom: 0px">
+                         <img src="{{ asset('/kec2.jpeg')}}" alt="" style="height: 70%">
                          <p style="font-size: 14px;text-align: center;">Fryers, Grills & Ovens</p>
                      </div>
 
-                 </div>
-
-                 <div class="row">
+                
 
                      <div class="col-md-6 client"  style="margin-bottom: 0px">
+                            <h4 style="color: red;font-weight: bold;">OUR KITCHEN DEEP CLEANING OFFERS</h4>
                         <div style="border: solid 2px red;border-radius: 5px;">
-                            <p style="font-size: 17px;color: red;font-weight: bold;margin-left: 25px">OUR KITCHEN<br> DEEP CLEANING OFFERS:</p> 
-                            <ul style="font-size: 17px">
-                                <li>Deep cleaning accumulated grease and fat on commercial and domestic kitchen equipment.</li>
+                            <ul style="font-size: 18px">
+                                <li style="color: green">Deep cleaning accumulated grease and fat on commercial and domestic kitchen equipment.</li>
                                 <li>Kitchen ventilation clean.</li>
-                                <li>Deep clean less accessible  surfaces and fittings to rid your kitchen of any  potential breeding ground for bacteria.</li>
+                                <li style="color: blue">Deep clean less accessible  surfaces and fittings to rid your kitchen of any  potential breeding ground for bacteria.</li>
                             </ul>
                         </div>
-                        <div style="margin-top: 30px">
-                            <p style="font-size: 14px;color: green">Full certification will be provided for regulatory and insurance purposes. This keeps you inline with the Hygiene Standards set out by the Food Safety Act 1990 and the Food Hygiene Regulations 2006.</p>
+                        <div style="margin-top: 30px;font-size: 17px;">
+                            <p style="color: green">Full certification will be provided for regulatory and insurance purposes. This keeps you inline with the Hygiene Standards set out by the Food Safety Act 1990 and the Food Hygiene Regulations 2006.</p>
 
                             <p style="margin-top: 30px">Our rates are affordable and negotiable. We operate with minimum disruption to your schedule.</p>
 
@@ -80,10 +86,10 @@
 
 
                     <div class="col-md-6 client" style="margin-bottom: 0px">
-                        <p style="color: blue">Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: helpinghands@cover-shift.co.uk </p>
+                        <p style="color: blue; font-size: 16px">Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: helpinghands@cover-shift.co.uk </p>
 
-                        <div>
-                            <h2 style="text-align: center;text-align: center;font-weight: bold;color: red;">CONTACT FORM</h2>
+                        <div class="half">
+                            <h4 style="text-align: center;text-align: center;font-weight: bold;color: red;">CONTACT FORM</h4>
                             <form {{-- v-on:keydown.enter.prevent.self --}} class="form-horizontal" method="POST" action="/kec-mail">
                                 {{ csrf_field() }}
                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} mx-auto">
@@ -116,6 +122,14 @@
                                     <div class="input">
                                         <label for="email_confirmation" class="control-label">Confirm Email</label>
                                         <input type="email" class="form-control" name="email_confirmation" value="{{ old('email_confirmation') }}"required autofocus>
+                                    </div>
+                                </div>
+
+                                <div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
+
+                                    <div class="input">
+                                        <label for="number" class="control-label">Contact Number (Optional)</label>
+                                        <input type="text" class="form-control" name="number" value="{{ old('number') }}" autofocus>
                                     </div>
                                 </div>
 

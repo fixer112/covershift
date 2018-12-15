@@ -27,11 +27,9 @@ Home
         <div class="work">
             <h3 class="half-head">Welcome to Booking Service Page</h3>
 
-            <p class="half-sub">
-            
-                <span style="">Please click on a service and continue</span><br>
-                <span style="">if your booking is a bit ongoing, please send us a mail. We will send you a quote</span>
-            
+            <div class="half-sub">
+                <span style="text-align: start;">Please click on a service and continue</span><br>
+                <span style="text-align: start;">if your booking is a bit ongoing, please send us a mail. We will send you a quote</div>
             </p>
             <form v-on:keydown.enter.prevent.self :action="book_staff" method="get" accept-charset="utf-8">
                 {{ csrf_field() }}
