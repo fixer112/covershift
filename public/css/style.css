@@ -53,7 +53,8 @@ header li a:hover, footer li a:hover {
 }
 .half-sub{
 	font-size: 14px;
-    display: grid;
+    text-align: center;
+
 }
 .container {
     margin-top: 50px;

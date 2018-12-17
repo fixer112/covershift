@@ -34,7 +34,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
         <div class="work">
             <h3 class="half-head">Welcome to Booking Service Page</h3>
 
-            <div class="col-6 mx-auto half-sub">
+            <div class="half-sub">
                 <ul>
                     <li>Please click on a service and continue</li>
                     <li>If you are not ok with booking online;</li>
