@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('title')
-About
+London's Helping Hands for Manual Tasks.
+@endsection
+
+@section('head')
+<meta name="description" content="We specialise in helping you complete office or domestic tasks: Furniture Removals, Errands, Sorting & Storage, Office Dismantling & Meeting Setup etc. Book Online or contact us today">
 @endsection
 
 @section('content')

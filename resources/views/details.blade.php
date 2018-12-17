@@ -143,17 +143,21 @@ Order Service
             <select name="shift_hour" class="form-control" v-model="hours" @change="cal" required>
                {{--  <option selected="true" disabled value="">Select Hour</option> --}}
                 @php
-                $num = 4;
-                $services = ['SIA-Security', 'Postroom-Assistant', 'Facilities-Assistant', 'Office-Porter'];
+                $num = 5;
+                $first = true;
+                $services = ['SIA-Security', 'Kitchen-Porter', 'Kitchen-Assistant'];
+                //['SIA-Security', 'Postroom-Assistant', 'Facilities-Assistant', 'Office-Porter'];
                 while ($num <= 12) {
-                    if ($num == 4) {
-                        if (in_array($service, $services)) {
-                        $num++ ;
+                    if ($num == 5) {
+                        if (!in_array($service, $services)) {
+                        //$first = false;
                         continue;
                         }
                     }
-                    echo'<option value="'.$num.'">'.$num.'</option>';
+                    $select = $first ? 'selected' : '';
+                    echo'<option '.$select.' value="'.$num.'">'.$num.'</option>';
                     
+                    $first = false;
                     $num++ ;
                 }
                 @endphp

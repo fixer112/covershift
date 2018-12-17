@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('title')
-Contact
+London's flexible Event, Postroom & Facilities Assistants for hire
+@endsection
+
+@section('head')
+<meta name="description" content="Book Online or contact us today for that Temporary shift cover: Event Assistants, Postroom & Facilities Assistants. London's best hands to cover staff absences">
 @endsection
 
 @section('content')

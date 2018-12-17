@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('title')
-Terms
+Terms - Need help with Manual Labour tasks?
+@endsection
+
+@section('head')
+<meta name="description" content="Contact us today: No matter what you are moving, our  trained labour staff will carefully load or unload your items into the transport vehicle or container.">
 @endsection
 
 @section('content')

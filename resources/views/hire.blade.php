@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
 @section('title')
-Hire Full Time Staff
+Affordable Event Management Support Services
+@endsection
+
+@section('head')
+<meta name="description" content="We provide Londoners with one-off & flexible SIA Security & Stewards for Events, Wedding, Party, Buildings & Close Protection. Book Online or contact us today
+
+">
 @endsection
 
 @section('content')

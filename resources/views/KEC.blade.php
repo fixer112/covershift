@@ -7,6 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <meta name="description" content="Contact us today for Deep Kitchen Clean, Cleanup of accumulated grease, fat & Kitchen Ventilation on commercial and domestic kitchen. Certification will be provided.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ asset('/css/app.css')}}" rel="stylesheet" type="text/css">
@@ -19,7 +20,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Anton:200,600" rel="stylesheet" type="text/css">
-    <title>Kitchen Equipment Cleaning</title>
+    <title>Affordable Kitchen Equipment Deep Cleaning Services</title>
     <link rel="stylesheet" href="">
 </head>
 <body>

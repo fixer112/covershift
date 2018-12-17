@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('title')
-Home
+London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
+@endsection
+
+@section('head')
+<meta name="description" content="Our office & domestic support services help with Removals, Office dismantling, Adhoc labourers, help with documents sorting & archiving. Book Online or contact us today
+">
 @endsection
 
 @section('content')
@@ -23,13 +28,22 @@ Home
     
 </div>
 <div class="col-12 mx-auto">
+    {{-- <div class="col-6 mx-auto"> --}}
+
     <div class="half">
         <div class="work">
             <h3 class="half-head">Welcome to Booking Service Page</h3>
 
-            <div class="half-sub">
-                <span style="text-align: start;">Please click on a service and continue</span><br>
-                <span style="text-align: start;">if your booking is a bit ongoing, please send us a mail. We will send you a quote</div>
+            <div class="col-6 mx-auto half-sub">
+                <ul>
+                    <li>Please click on a service and continue</li>
+                    <li>If you are not ok with booking online;</li>
+                    <li>Or would rather discuss your request before booking;</li>
+                    <li>Or the request is a bit ongoing, please send a mail to: helpinghands@cover-shift.co.uk. We will contact you immediately</li>
+                </ul>
+                {{-- <span style="text-align: start;">Please click on a service and continue</span><br><br>
+                <span style="text-align: start;">*if you would rather discuss your request before booking or the request is a bit ongoing, please send a mail to: helpinghands@cover-shift.co.uk. We will contact you immediately</span> --}}
+            </div>
             </p>
             <form v-on:keydown.enter.prevent.self :action="book_staff" method="get" accept-charset="utf-8">
                 {{ csrf_field() }}
@@ -42,7 +56,7 @@ Home
                 </div>
 
                 <div class="form-group services row">
-                    <div class="info col-6 mx-auto">
+                    <div class="info col-8j mx-auto">
                         <input ref="2" type="checkbox" name="service" class="check" value="SIA Security" @click="check(2,'14.50')"> <span class="service"><strong>SIA Security</strong> <p>(Events, Door Supervisor, Deterrent, Buildings, House Party, Wedding, Close Protection)</p></span>
                     </div>
 
@@ -105,6 +119,9 @@ Home
             </form>
         </div>
     </div>
+   
+{{-- </div> --}}
+
 </div>
 
 

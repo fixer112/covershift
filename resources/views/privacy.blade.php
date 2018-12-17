@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('title')
-Privacy Policy
+Privacy Policy - Flexible SIA Security, Event Stewards & Private Body Guards
+@endsection
+
+@section('head')
+<meta name="description" content="Book online or contact us: We provide one- off Security, Events Steward or Close Protection staff to cover Conferences, VIP Visits, Wedding & Property Protection.">
 @endsection
 
 @section('content')

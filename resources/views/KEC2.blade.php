@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Contact us today: Our team is made up of certified kitchen  cleaning professionals capable of leaving your kitchen like brand new. Regulatory Certification provided after service.">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
@@ -19,7 +20,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Anton:200,600" rel="stylesheet" type="text/css">
-    <title>Kitchen Equipment Cleaning</title>
+    <title>UK's best Kitchen Equipment Cleaning Service</title>
     <link rel="stylesheet" href="">
     <style type="text/css" media="screen">
         .row{margin-bottom: -90px;}

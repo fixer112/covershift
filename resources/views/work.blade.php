@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('title')
-Work for us
+Hire our temporary Kitchen Porters and Kitchen Assistants
+@endsection
+
+@section('head')
+<meta name="description" content="We offer reliable Kitchen Porters & Kitchen Assistants that help out during staff shortages. Book Online or contact us now.">
 @endsection
 
 @section('content')

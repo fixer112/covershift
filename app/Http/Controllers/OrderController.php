@@ -28,14 +28,14 @@ class OrderController extends Controller
     }
     public function book($service)
     {
-    	$list=[ 'Office-Porter'=> 13.25,
+    	$list=[ 'Office-Porter'=> 14.00,
     		 	'SIA-Security'=> 14.50,
-    		 	'Helping-Hands'=> 13.00,
-    		 	'Event-Assistant'=> 13.00,
+    		 	'Helping-Hands'=> 14.00,
+    		 	'Event-Assistant'=> 13.75,
     		 	'Facilities-Assistant'=>13.50,
     		 	'Postroom-Assistant'=>13.50,
-    		 	'Kitchen-Porter'=>12.50,
-    		 	'Kitchen-Assistant'=>12.50
+    		 	'Kitchen-Porter'=>13.00,
+    		 	'Kitchen-Assistant'=>13.00
     		 ];
     	session(['service' => $service]);
     	session(['price' => $list[$service]]);

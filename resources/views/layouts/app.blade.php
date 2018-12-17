@@ -57,9 +57,9 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
             <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/kec')}}">KEC</a>
             </li>
-            <li class="nav-item menu-link">
+            {{-- <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/kec2')}}">KEC2</a>
-            </li>
+            </li> --}}
             
       {{-- <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
