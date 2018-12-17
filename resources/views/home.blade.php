@@ -56,7 +56,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
                 </div>
 
                 <div class="form-group services row">
-                    <div class="info col-8j mx-auto">
+                    <div class="info col-6 mx-auto">
                         <input ref="2" type="checkbox" name="service" class="check" value="SIA Security" @click="check(2,'14.50')"> <span class="service"><strong>SIA Security</strong> <p>(Events, Door Supervisor, Deterrent, Buildings, House Party, Wedding, Close Protection)</p></span>
                     </div>
 
