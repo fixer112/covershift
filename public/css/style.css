@@ -54,6 +54,7 @@ header li a:hover, footer li a:hover {
 .half-sub{
 	font-size: 14px;
     text-align: center;
+    list-style-position: inside;
 
 }
 .container {
@@ -176,8 +177,11 @@ label.control-label {
 }
 @media (min-width:992px){
     .menu-link {
+   /* margin-left: 70px;*/
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 
-    margin-left: 70px;
 
 }
 }
@@ -222,4 +226,23 @@ input[type="checkbox"], input[type="radio"] {
 }
 .paypal img{
     display: block;
+}
+.bord{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: green;
+}
+
+.bord li::before {
+
+    content: "\2022";
+    color: red;
+    font-weight: bolder;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.bord li{
+list-style: none;
 }

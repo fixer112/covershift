@@ -195,7 +195,7 @@ Order Service
                 <h2>Summary</h2> <br> <span style="font-size: 10px;font-weight: bold" v-if="from && to">From @{{from_time}} To @{{to_time}}</span>
             </div> 
             <div class="summary">
-                <p><span class="name">Service</span> <span class="value">{{str_replace('-', ' ', $service)}}</span></p>
+                <p><span class="name">Service</span> <span class="value">{{str_replace('-', ' ', str_replace('_', '/', $service))}}</span></p>
                 <p><span class="name">Price per hour</span> <span class="value">£{{$price}}</span></p>
                 <p><span class="name">Total Number of Days</span> <span class="value">@{{days_needed}}</span></p>
                 <p><span class="name">Total number of staff(s)</span> <span class="value">@{{staff_num}}</span></p>

@@ -6,6 +6,11 @@ London's flexible Event, Postroom & Facilities Assistants for hire
 
 @section('head')
 <meta name="description" content="Book Online or contact us today for that Temporary shift cover: Event Assistants, Postroom & Facilities Assistants. London's best hands to cover staff absences">
+<style type="text/css">
+    body{
+        background-color: #cee5f3;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -22,12 +27,14 @@ London's flexible Event, Postroom & Facilities Assistants for hire
    </div>
 </div> --}}
 <div class="col-12 mx-auto">
-				<h3 style="text-align: center;margin-bottom: 20px;color: blue;">Welcome to our Vacant Property Security <br> Contact Page</h3>
+				
                 <div class="row">
 
                     <div class="col-6" style="margin-bottom: 0px">
-                    	<p style="font-size: 25px;font-weight: bold;text-align: center;">@</p>
-                    <p style="text-align: center;"><span style="color: red;font-size: 25px">CoverShift Security Solutions</span> 
+                    	
+                    <p style="text-align: center;"><span style="color: red;font-size: 25px">Thanks for visiting the Vacant Property Security Contact Page CoverShift Security Solutions</span> 
+                        <br>
+                        @
                         <br>
                         <span>(A division of CoverShift: www.cover-shift.co.uk)</span>
                         <br> 
@@ -41,55 +48,31 @@ London's flexible Event, Postroom & Facilities Assistants for hire
                     </div>
 
                     <div class="col-6 client" style="margin-bottom: 0px">
-                        <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 70%">
+                        <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 70%">
                         {{-- <p style="font-size: 14px;text-align: center;">Kitchen Equipment Deep Clean</p> --}}
 
                     </div>
 
                
 
-                    <div class="col-6" style="margin-bottom: 0px">
-                     <p style="text-align: center;"><span style="color: red;font-size: 25px">Why use our Property Security Solutions</span></p>
-                     <ul style="margin-left: 10%;">
-                     	<li>Affordable & negotiable rates</li>
-                     	<li>Reliable manned guarding</li>
-                     	<li>SIA Licensed</li>
-                     </ul>
-                     </div>
-
-                     <div class="col-6 client" style="margin-bottom: 0px">
-                         <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 70%">
-                         <{{-- p style="font-size: 14px;text-align: center;">Fryers, Grills & Ovens</p> --}}
-                     </div>
-
-                
-
-                     {{-- <div class="col-md-6 client"  style="margin-bottom: 0px">
-                            <h4 style="color: red;font-weight: bold;">OUR KITCHEN DEEP CLEANING OFFERS</h4>
-                        <div style="border: solid 2px red;border-radius: 5px;">
-                            <ul style="font-size: 18px">
-                                <li style="color: green">Deep cleaning accumulated grease and fat on commercial and domestic kitchen equipment.</li>
-                                <li>Kitchen ventilation clean.</li>
-                                <li style="color: blue">Deep clean less accessible  surfaces and fittings to rid your kitchen of any  potential breeding ground for bacteria.</li>
-                            </ul>
-                        </div>
-                        <div style="margin-top: 30px;font-size: 17px;">
-                            <p style="color: green">Full certification will be provided for regulatory and insurance purposes. This keeps you inline with the Hygiene Standards set out by the Food Safety Act 1990 and the Food Hygiene Regulations 2006.</p>
-
-                            <p style="margin-top: 30px">Our rates are affordable and negotiable. We operate with minimum disruption to your schedule.</p>
-
-                            
-                        </div>
-                    </div> --}}
+                    
+                     
 
                     <div class="col-md-6" style="margin-bottom: 0px">
+                     <p style="text-align: center;"><span style="color: red;font-size: 20px">Why use our Empty Property Security Services</span></p>
+                     <ul style="margin-left: 10%;margin-bottom: 10%">
+                     	<li>Affordable & negotiable rates</li>
+                        <li>Reliable manned guarding</li>
+                        <li>SIA Licensed</li>
+                     </ul>
+
                      <p style="text-align: center;"><span style="color: red;font-size: 20px">CoverShift is a spe­cial­ist provider of security solutions in London & surrounding counties for</span></p>
                      <ul style="margin-left: 10%;margin-bottom: 10%">
-                     	<li>Vacant, unoc­cu­pied and void prop­er­ties</li>
-                     	<li>Buildings undergoing refurbishment</li>
-                     	<li>Sites undergoing construction</li>
-                     	<li>Land guardianship</li>
-                     	<li>Occupy with court order</li>
+                        <li>Vacant, unoc­cu­pied and void prop­er­ties</li>
+                        <li>Buildings undergoing refurbishment</li>
+                        <li>Sites undergoing construction</li>
+                        <li>Land guardianship</li>
+                        <li>Occupy with court order</li>
                      </ul>
 
                      <p style="text-align: center;"><span style="color: red;font-size: 20px;">We offer 5 core services in this regard</span></p>

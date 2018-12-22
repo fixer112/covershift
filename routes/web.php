@@ -23,6 +23,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/contact2', function () {
+    return view('contact2');
+});
+
 Route::get('/hire', function () {
     return view('hire');
 });

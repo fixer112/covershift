@@ -28,7 +28,7 @@ class OrderController extends Controller
     }
     public function book($service)
     {
-    	$list=[ 'Office-Porter'=> 14.00,
+    	$list=[ 'Labour-Staff_Office-Porter'=> 14.00,
     		 	'SIA-Security'=> 14.50,
     		 	'Helping-Hands'=> 14.00,
     		 	'Event-Assistant'=> 13.75,
