@@ -49,10 +49,10 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
                 <a class="nav-link" href="{{url('/about')}}">About Us</a>
             </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/contact')}}">Contact </a>
+                <a class="nav-link" href="{{url('/security')}}">Security </a>
             </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/contact')}}">Contact2 </a>
+                <a class="nav-link" href="{{url('/security2')}}">Security2 </a>
             </li>
             <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/work_for_us')}}">Work For Us </a>

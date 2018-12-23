@@ -246,3 +246,9 @@ input[type="checkbox"], input[type="radio"] {
 .bord li{
 list-style: none;
 }
+.plane-border{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3333;
+    border-radius: 5px;
+}

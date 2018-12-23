@@ -19,12 +19,12 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/security', function () {
+    return view('security');
 });
 
-Route::get('/contact2', function () {
-    return view('contact2');
+Route::get('/security2', function () {
+    return view('security2');
 });
 
 Route::get('/hire', function () {

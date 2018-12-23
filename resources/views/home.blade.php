@@ -35,20 +35,20 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
             <h3 class="half-head" style="color: red">Welcome to Booking Service Page</h3>
         
 
-            <div class="half-sub bord" style="margin-top: 20px">
+            <div class="half-sub bord" style="margin-top: 20px;text-align: left">
                 <ul>
-                    <li>Welcome to CoverShift -  an on-demand staffing system that provides flexible Office Labour Staff & Event Mgmt Support to London  businesses in a simplified process. We are based in London's central business district of Hatton Garden, EC1N.</li>
+                    <li style="margin-bottom: 10px">Welcome to CoverShift -  an on-demand staffing system that provides flexible Office Labour Staff & Event Mgmt Support to London  businesses in a simplified process. We are based in London's central business district of Hatton Garden, EC1N.</li>
 
-                    <li>Our website allows you to book and process any Service automatically, thereby saving time, however, if that is not comfortable, you can send us an email with your request. We can also serve you on Contract basis or Price Work.</li>
+                    <li style="margin-bottom: 10px">Our website allows you to book and process any Service automatically, thereby saving time, however, if that is not comfortable, you can send us an email with your request. We can also serve you on Contract basis or Price Work.</li>
 
-                    <li>We provide London offices with flexible Office Labour Staff, Event Security staff, Event Stewards and  & Help with Manual Handling Tasks.</li>
+                    <li style="margin-bottom: 10px">We provide London offices with flexible Office Labour Staff, Event Security staff, Event Stewards & Help with Manual Handling Tasks. We also provide security for vacant properties.</li>
 
-                    <li>This Services include providing ad hoc Office Porters, Facilities Assistants, Postroom Assistants, Load & Unload of goods, Office Dismantling, Meetings Setup, Sorting & Storage etc</li>
+                    <li style="margin-bottom: 10px">This Services include providing ad hoc Office Porters, Facilities Assistants, Postroom Assistants, Load & Unload of goods, Office Dismantling, Meetings Setup, Sorting & Storage etc</li>
 
-                    <li>We help bring the flow to Office Ad hoc Tasks & Event Management Services so you can do more important things.</li>
+                    <li style="">We help bring the flow to Office Ad hoc Tasks & Event Management Services so you can do more important things.</li>
                 </ul>
             </div>
-           <div class="half-sub" style="margin-top: 20px">
+           <div class="half-sub" style="margin-top: 30px;color:blue">
                 <ul>
                     <li>Please click on a service and continue</li>
                     <li>If you are not ok with booking online;</li>
