@@ -36,7 +36,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
         
 
             <div class="half-sub bord" style="margin-top: 20px;text-align: left">
-                <ul>
+                <ul style="    padding-top: 20px;">
                     <li style="margin-bottom: 10px">Welcome to CoverShift -  an on-demand staffing system that provides flexible Office Labour Staff & Event Mgmt Support to London  businesses in a simplified process. We are based in London's central business district of Hatton Garden, EC1N.</li>
 
                     <li style="margin-bottom: 10px">Our website allows you to book and process any Service automatically, thereby saving time, however, if that is not comfortable, you can send us an email with your request. We can also serve you on Contract basis or Price Work.</li>

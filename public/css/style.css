@@ -249,6 +249,7 @@ list-style: none;
 .plane-border{
     border-style: solid;
     border-width: 2px;
-    border-color: #3333;
+    border-color: #333333bf;
     border-radius: 5px;
+    font-size: 17px;
 }

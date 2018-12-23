@@ -20,7 +20,7 @@
     <meta name="description" content="Book Online or contact us today for that Temporary shift cover: Event Assistants, Postroom & Facilities Assistants. London's best hands to cover staff absences">
 <style type="text/css">
     body{
-        background-color: #cee5f3;
+        background-color: #cee5f32b;
     }
 </style>
     <link href="https://fonts.googleapis.com/css?family=Anton:200,600" rel="stylesheet" type="text/css">
@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="col-6 client" style="margin-bottom: 0px">
-                        <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 70%">
+                        <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 250px">
                         {{-- <p style="font-size: 14px;text-align: center;">Kitchen Equipment Deep Clean</p> --}}
 
                     </div>
@@ -68,7 +68,7 @@
                     <div class="col-md-6" style="margin-bottom: 0px">
 
                     <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 20px">Why use our Empty Property Security Services?</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 15px">Why use our Empty Property Security Services?</span></p>
                      <ul style="margin-left: 10%;">
                         <li>Affordable & negotiable rates</li>
                         <li>Reliable manned guarding</li>
@@ -88,7 +88,7 @@
                  </div>
 
                     <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 20px;">We offer 5 core services in this regard :</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 18px;">We offer 5 core services in this regard :</span></p>
                      <ul style="margin-left: 10%;">
                         <li>24 /7 Security</li>
                         <li>Cleaning the property</li>

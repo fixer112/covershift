@@ -44,7 +44,7 @@
                      </p>
 
                      <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 25px">Why use our Property Security Solutions?</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 17px">Why use our Property Security Solutions?</span></p>
                      <ul style="margin-left: 10%;margin-bottom: 10%">
                         <li>Affordable & negotiable rates</li>
                         <li>Reliable manned guarding</li>
@@ -64,7 +64,7 @@
                         </div>
 
                          <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 20px">CoverShift is a spe­cial­ist provider of security solutions in London & surrounding counties for :</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 18px">CoverShift is a spe­cial­ist provider of security solutions in London & surrounding counties for :</span></p>
                      <ul style="margin-left: 10%;">
                         <li>Vacant, unoc­cu­pied and void prop­er­ties</li>
                         <li>Buildings undergoing refurbishment</li>
@@ -75,7 +75,7 @@
                     </div>
 
                      <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 20px;">We offer 5 core services in this regard:</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 18px;">We offer 5 core services in this regard:</span></p>
                      <ul style="margin-left: 10%;">
                         <li>24 /7 Security</li>
                         <li>Cleaning the property</li>
@@ -96,11 +96,11 @@
                     <div class="col-md-6" style="margin-bottom: 0px">
                         <div class="d-none d-sm-block">
                         <div class="client" style="margin-bottom: 10%">
-                        <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 70%">
+                        <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 250px">
                         </div>
 
                          <div class="client" style="margin-bottom: 10%">
-                         <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 70%">
+                         <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 250px">
                          {{-- <p style="font-size: 14px;text-align: center;">Fryers, Grills & Ovens</p> --}}
                         </div>
                         </div>
