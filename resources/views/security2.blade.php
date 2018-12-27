@@ -48,17 +48,17 @@
                          34 New House, <br>
                          Hatton Garden,<br>
                          London, EC1N 8JY,<br>
-                         United Kingdom<br> Tel: 020 333 2015
+                         United Kingdom<br> Tel: 020 333 20135
                      </p>
                         
 
                     </div>
 
-                    <div class="col-6 client" style="margin-bottom: 0px">
-                        <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 250px">
-                        {{-- <p style="font-size: 14px;text-align: center;">Kitchen Equipment Deep Clean</p> --}}
+                   
 
-                    </div>
+                     <div class="col-6 client" style="margin-bottom: 10%">
+                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 250px">
+                        </div>
 
                
 
@@ -68,7 +68,7 @@
                     <div class="col-md-6" style="margin-bottom: 0px">
 
                     <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 15px">Why use our Empty Property Security Services?</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 20px">Why use our Empty Property Security Services?</span></p>
                      <ul style="margin-left: 10%;">
                         <li>Affordable & negotiable rates</li>
                         <li>Reliable manned guarding</li>
@@ -88,7 +88,7 @@
                  </div>
 
                     <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 18px;">We offer 5 core services in this regard :</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 20px;">We offer 5 core services in this regard :</span></p>
                      <ul style="margin-left: 10%;">
                         <li>24 /7 Security</li>
                         <li>Cleaning the property</li>
@@ -99,10 +99,12 @@
 
                      </ul>
                  </div>
+                 <div style="font-size: 18px">
                      <p>Our cus­tomers rely on our expert ser­vices to reduce the security costs of vacant properties as this could become long term projects.</p>
 
                      <p>Why pay so much when you can negotiate with us for an affordable quality security solution?</p>
                      </div>
+                 </div>
 
 
                     <div class="col-md-6 client" style="margin-bottom: 0px">
@@ -170,6 +172,12 @@
                             </ul>
                         </div>
                         @endif
+
+                        <div class="client" style="margin-bottom: 0px">
+                        <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 250px">
+
+                    </div>
+
                     </div>
 
                 </div>

@@ -40,12 +40,12 @@
                          34 New House, <br>
                          Hatton Garden,<br>
                          London, EC1N 8JY,<br>
-                         United Kingdom<br> Tel: 020 333 2015
+                         United Kingdom<br> Tel: 020 333 20135
                      </p>
 
                      <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 17px">Why use our Property Security Solutions?</span></p>
-                     <ul style="margin-left: 10%;margin-bottom: 10%">
+                     <p style="text-align: center;"><span style="color: red;font-size: 20px">Why use our Property Security Solutions?</span></p>
+                     <ul style="margin-left: 10%">
                         <li>Affordable & negotiable rates</li>
                         <li>Reliable manned guarding</li>
                         <li>SIA Licensed</li>
@@ -53,18 +53,22 @@
                     </div>
 
                      <div class=" row d-sm-none">
-                        <div class="col-6 client" style="margin-bottom: 0%">
+                         <div class="col-4 client" style="margin-bottom: 10%">
+                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 250px">
+                        </div>
+
+                        <div class="col-4 client" style="margin-bottom: 0%">
                         <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 70%">
                         </div>
 
-                         <div class="col-6 client" style="margin-bottom: 0%">
+                         <div class="col-4 client" style="margin-bottom: 0%">
                          <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 70%">
                          {{-- <p style="font-size: 14px;text-align: center;">Fryers, Grills & Ovens</p> --}}
                         </div>
                         </div>
 
                          <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 18px">CoverShift is a spe­cial­ist provider of security solutions in London & surrounding counties for :</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 20px">CoverShift is a spe­cial­ist provider of security solutions in London & surrounding counties for :</span></p>
                      <ul style="margin-left: 10%;">
                         <li>Vacant, unoc­cu­pied and void prop­er­ties</li>
                         <li>Buildings undergoing refurbishment</li>
@@ -75,7 +79,7 @@
                     </div>
 
                      <div class="plane-border" style="margin-bottom: 10%">
-                     <p style="text-align: center;"><span style="color: red;font-size: 18px;">We offer 5 core services in this regard:</span></p>
+                     <p style="text-align: center;"><span style="color: red;font-size: 20px;">We offer 5 core services in this regard:</span></p>
                      <ul style="margin-left: 10%;">
                         <li>24 /7 Security</li>
                         <li>Cleaning the property</li>
@@ -87,23 +91,16 @@
                      </ul>
                      </div>
 
-                     <p>Our cus­tomers rely on our expert ser­vices to reduce the security costs of vacant properties  as this is could become long term projects.</p>
+                     <div style="font-size: 18px">
+                     <p>Our cus­tomers rely on our expert ser­vices to reduce the security costs of vacant properties  as this could become long term projects.</p>
 
                      <p>Why pay so much when you can negotiate with us for an affordable quality security solution.</p>
                      </div>
+                    </div>
 
 
                     <div class="col-md-6" style="margin-bottom: 0px">
-                        <div class="d-none d-sm-block">
-                        <div class="client" style="margin-bottom: 10%">
-                        <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 250px">
-                        </div>
-
-                         <div class="client" style="margin-bottom: 10%">
-                         <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 250px">
-                         {{-- <p style="font-size: 14px;text-align: center;">Fryers, Grills & Ovens</p> --}}
-                        </div>
-                        </div>
+                        
 
                         <div class="client">
                         <p style="color: blue; font-size: 16px">Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: helpinghands@cover-shift.co.uk </p>
@@ -171,6 +168,25 @@
                         </div>
                         @endif
                     </div>
+
+                    <div class="d-none d-sm-block">
+
+                        <div class="client" style="margin-bottom: 10%">
+                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 250px">
+                        </div>
+                        
+                        <div class="client" style="margin-bottom: 10%">
+                        <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 250px">
+                        </div>
+
+                        
+
+                         <div class="client" style="margin-bottom: 10%">
+                         <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 250px">
+                         {{-- <p style="font-size: 14px;text-align: center;">Fryers, Grills & Ovens</p> --}}
+                        </div>
+                        </div>
+
                 </div>
 
                 </div>

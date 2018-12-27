@@ -252,4 +252,6 @@ list-style: none;
     border-color: #333333bf;
     border-radius: 5px;
     font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
