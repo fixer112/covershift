@@ -54,15 +54,15 @@
 
                      <div class=" row d-sm-none">
                          <div class="col-4 client" style="margin-bottom: 10%">
-                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 250px">
+                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 150px">
                         </div>
 
                         <div class="col-4 client" style="margin-bottom: 0%">
-                        <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 70%">
+                        <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 150px">
                         </div>
 
                          <div class="col-4 client" style="margin-bottom: 0%">
-                         <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 70%">
+                         <img src="{{ asset('/security2.jpeg')}}" alt="security" style="height: 150px">
                          {{-- <p style="font-size: 14px;text-align: center;">Fryers, Grills & Ovens</p> --}}
                         </div>
                         </div>
@@ -103,7 +103,7 @@
                         
 
                         <div class="client">
-                        <p style="color: blue; font-size: 16px">Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: helpinghands@cover-shift.co.uk </p>
+                        <p style="color: blue; font-size: 16px">Please fill the short form below and we will get back to you with a budget quote. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: <br> helpinghands@cover-shift.co.uk </p>
 
                         <div class="half">
                             <h4 style="text-align: center;text-align: center;font-weight: bold;color: red;">CONTACT FORM</h4>
@@ -174,7 +174,7 @@
                         <div class="client" style="margin-bottom: 10%">
                         <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 250px">
                         </div>
-                        
+
                         <div class="client" style="margin-bottom: 10%">
                         <img src="{{ asset('/security1.jpeg')}}" alt="security" style="height: 250px">
                         </div>
