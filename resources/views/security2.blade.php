@@ -57,7 +57,7 @@
                    
 
                      <div class="col-6 client" style="margin-bottom: 10%">
-                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 250px">
+                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 100px;width: 150px;">
                         </div>
 
                

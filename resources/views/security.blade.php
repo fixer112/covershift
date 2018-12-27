@@ -52,9 +52,9 @@
                      </ul>
                     </div>
 
-                     <div class=" row d-sm-none">
+                     <div class=" row d-sm-none mb-4">
                          <div class="col-4 client" style="margin-bottom: 10%">
-                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 150px">
+                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 100px;">
                         </div>
 
                         <div class="col-4 client" style="margin-bottom: 0%">
@@ -172,7 +172,7 @@
                     <div class="d-none d-sm-block">
 
                         <div class="client" style="margin-bottom: 10%">
-                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 250px">
+                        <img src="{{ asset('/sia.jpeg')}}" alt="security" style="height: 100px;width: 150px;">
                         </div>
 
                         <div class="client" style="margin-bottom: 10%">
