@@ -451,7 +451,7 @@ class OrderController extends Controller
         $this->validate($request, [
                     'name' => 'required|string|max:50',
                     'email' => 'required|email|confirmed',
-                    'number' => 'numeric',
+                    'number' => 'nullable|numeric',
                     'req' => 'required|max:500',
                      ]);
 
