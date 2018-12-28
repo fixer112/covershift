@@ -81,7 +81,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
 <div class="container">
     <div id="app" class="row">
 
-        <div class="col-12 mx-auto">
+        {{-- <div class="col-12 mx-auto">
             @if (session('success'))
             <div class="alert alert-success  mx-auto">
                 {{ session('success') }}
@@ -97,7 +97,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
             </div>
             @endif
             
-        </div>
+        </div> --}}
 
         @yield('content')
 
