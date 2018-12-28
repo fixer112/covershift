@@ -155,6 +155,7 @@
                                     </div>
                                 </div>
 
+                                <input type="text" name="msg" value="New Client Applied To security contact page" hidden>
                                 
                                 <button type="submit" class="btn btn-success">
                                     Send

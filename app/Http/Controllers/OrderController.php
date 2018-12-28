@@ -456,13 +456,14 @@ class OrderController extends Controller
                      ]);
 
             $num = $request->number ? $request->number : 'None';
+            $message = $request->msg;
         //$reply = $request->email;
         //$name =  $request->fname.' '.$request->lname;
         $content = 'Name : '.$request->name.
                     '<br> Email : '.$request->email.
                     '<br> Contact Number : '.$num.
                     '<br> Request : '.$request->req;
-         Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content, 'New Client Applied To Kitchen Equipment Cleaning'));
+         Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content, $message));
 
                 $request->session()->flash('success', 'Email sent Successfully. We will get back to you soon');
                  return view('/alert');

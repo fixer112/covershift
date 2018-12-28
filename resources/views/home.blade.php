@@ -10,23 +10,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
 @endsection
 
 @section('content')
-<div class="col-12 mx-auto">
-    @if (session('success'))
-    <div class="alert alert-success  mx-auto">
-        {{ session('success') }}
-        @if(session('download'))
-        <strong><a href="{{session('download')}}">Download Reciept</a></strong>
-        @endif
-    </div>
-    @endif
 
-    @if (session('failed'))
-    <div class="alert alert-danger  mx-auto">
-        {{ session('failed') }}
-    </div>
-    @endif
-    
-</div>
 <div class="col-12 mx-auto">
     {{-- <div class="col-6 mx-auto"> --}}
 
