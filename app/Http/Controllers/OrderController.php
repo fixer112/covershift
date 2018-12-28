@@ -468,7 +468,7 @@ class OrderController extends Controller
 
                 $request->session()->flash('mail', 'Email sent Successfully. We will get back to you soon');
                 $request->session()->flash('ser', $request->ser);
-                 return view('/mailSent');
+                 return view('/alert');
     }
 
 

@@ -6,7 +6,23 @@ Alert
 
 @section('content')
 <div class="col-12 mx-auto">
+    
+         @if (session('mail'))
+         <div class="alert alert-success col-10 mx-auto">
+            <center>
+                <div style="font-size: 20px">
+                 <p>Great!</p>
+                 <p>Message Successfully sent</p>
+                </div>
 
+                <div style="font-size: 16px">
+                    <p>Thanks for contacting us<br>we will get back to you shortly.</p>
+                    <p>-{{session('ser')}}</p>
+                </div>
+            </center>
+         </div>
+         @endif
+    
    
 
 
