@@ -156,6 +156,7 @@
                                 </div>
 
                                 <input type="text" name="msg" value="New Client Applied To security contact page" hidden>
+                                <input type="text" name="type" value="Covershift Security Solutions" hidden>
                                 
                                 <button type="submit" class="btn btn-success">
                                     Send

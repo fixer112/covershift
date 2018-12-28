@@ -135,7 +135,8 @@
                                 </div>
 
                                 <input type="text" name="msg" value="New Client Applied To Kitchen Equipment Cleaning" hidden>
-                                
+                                <input type="text" name="type" value="Covershift Cleaning Services" hidden>
+
                                 <button type="submit" class="btn btn-success">
                                     Send
                                 </button>

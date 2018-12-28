@@ -465,7 +465,8 @@ class OrderController extends Controller
                     '<br> Request : '.$request->req;
          Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content, $message));
 
-                $request->session()->flash('success', 'Email sent Successfully. We will get back to you soon');
+                $request->session()->flash('mail', 'Email sent Successfully. We will get back to you soon');
+                $request->session()->flash('type', $request->type);
                  return view('/alert');
     }
 
