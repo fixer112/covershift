@@ -448,6 +448,7 @@ class OrderController extends Controller
     }
 
     public function kecMail(Request $request){
+        //return $request->all();
         $this->validate($request, [
                     'name' => 'required|string|max:50',
                     'email' => 'required|email|confirmed',
@@ -466,7 +467,7 @@ class OrderController extends Controller
          Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content, $message));
 
                 $request->session()->flash('mail', 'Email sent Successfully. We will get back to you soon');
-                $request->session()->flash('type', $request->type);
+                $request->session()->flash('ser', $request->ser);
                  return view('/mailSent');
     }
 

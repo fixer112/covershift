@@ -28,7 +28,7 @@
         <div id="app" class="row">
             <div class="col-12 mx-auto">
                  @if (session('mail'))
-                 <div class="alert alert-success col-6 mx-auto">
+                 <div class="alert alert-success col-10 mx-auto">
                     <center>
                         <div style="font-size: 20px">
                          <p>Great!</p>
@@ -37,7 +37,7 @@
 
                         <div style="font-size: 16px">
                             <p>Thanks for contacting us<br>we will get back to you shortly.</p>
-                            <p>-{{session('type')}}</p>
+                            <p>-{{session('ser')}}</p>
                         </div>
                     </center>
                  </div>
