@@ -31,7 +31,7 @@
         <p style="text-align: center;">@</p>
         <p style="text-align: center;"><span style="color: red;font-size: 25px">CoverShift Cleaning Services</span> <br>
         <span>(A division of CoverShift: www.cover-shift.co.uk)</span><br> 
-        34 New House, Hatton Garden, London, EC1N 8JY, United Kingdom<br> Tel: 020 333 2015</p>
+        34 New House, Hatton Garden, London, EC1N 8JY, United Kingdom<br> Tel: 020 333 20135</p>
 
         <div class="row">
             <div class="col-6 client">
@@ -63,7 +63,7 @@
 
         <p style="color: blue">Our rates are affordable and negotiable. We operate with minimum disruption to your schedule.</p>
 
-        <p style="color: green">Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: helpinghands@cover-shift.co.uk </p>
+        <p style="color: green">Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: <br>covershiftservices@cover-shift.co.uk </p>
     </div>
     <div class="col-10 mx-auto">
         <h4 style="text-align: center;text-align: center;font-weight: bold;margin-top: 50px;color: red;">CONTACT FORM</h4>

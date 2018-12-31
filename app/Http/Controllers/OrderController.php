@@ -400,7 +400,7 @@ class OrderController extends Controller
 
          $this->reciept->addParagraph("");
 
-    	 $this->reciept->addParagraph("If you have an update or correction for this order or would rather pay through an invoice, please send us a  mail vias helpinghands@cover-shift.co.uk");
+    	 $this->reciept->addParagraph("If you have an update or correction for this order or would rather pay through an invoice, please send us a  mail vias covershiftservices@cover-shift.co.uk");
 
          $this->reciept->setFooternote("Team CoverShift");
 
@@ -440,7 +440,7 @@ class OrderController extends Controller
                     '<br> PostCode : '.$request->postcode.
                     '<br> Mobile : '.$request->number.
                     '<br> Specialisation '.$request->service;
-         Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content));
+         Mail::to('covershiftservices@cover-shift.co.uk')->send(new Work($content));
 
                 $request->session()->flash('success', 'Email sent Successfully. We will get back to you soon');
                  return view('/alert');
@@ -464,11 +464,12 @@ class OrderController extends Controller
                     '<br> Email : '.$request->email.
                     '<br> Contact Number : '.$num.
                     '<br> Request : '.$request->req;
-         Mail::to('helpinghands@cover-shift.co.uk')->send(new Work($content, $message));
+         Mail::to('covershiftservices@cover-shift.co.uk')->send(new Work($content, $message));
 
                 $request->session()->flash('mail', 'Email sent Successfully. We will get back to you soon');
                 $request->session()->flash('ser', $request->ser);
-                 return view('/alert');
+                 //return view('/alert');
+                 return redirect('/alert');
     }
 
 

@@ -108,7 +108,7 @@
 
 
                     <div class="col-md-6 client" style="margin-bottom: 0px">
-                        <p style="color: blue; font-size: 16px">Please fill the short form below and we will get back to you with a budget quote. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: <br>helpinghands@cover-shift.co.uk </p>
+                        <p style="color: blue; font-size: 16px">Please fill the short form below and we will get back to you with a budget quote. We take your privacy seriously. No details will be shared. <br> In the alternative you can send a quick email to: <br>covershiftservices@cover-shift.co.uk </p>
 
                         <div class="half">
                             <h4 style="text-align: center;text-align: center;font-weight: bold;color: red;">CONTACT FORM</h4>

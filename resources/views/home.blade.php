@@ -37,7 +37,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
                     <li>Please click on a service and continue</li>
                     <li>If you are not ok with booking online;</li>
                     <li>Or would rather discuss your request before booking;</li>
-                    <li>Or the request is a bit ongoing, please send a mail to: helpinghands@cover-shift.co.uk. We will contact you immediately</li>
+                    <li>Or the request is a bit ongoing, please send a mail to: covershiftservices@cover-shift.co.uk. We will contact you immediately</li>
                 </ul>
                
             </div>
