@@ -61,6 +61,14 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/labour', function () {
+    return view('labour');
+});
+
+Route::get('/event', function () {
+    return view('event');
+});
+
 Route::get('/download/{invoice}', function ($invoice) {
 	return response()->file(public_path('/reciept/'.$invoice.'.pdf'));
   	//return redirect('/');
