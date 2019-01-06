@@ -37,8 +37,10 @@
                         <h3 style="color:red">CoverShift Services <h3>
                         <h4>
                             ( www.cover-shift.co.uk)<br>
-                            34 New House, Hatton Garden,<br>
-                            London, EC1N 8JY, United Kingdom<br>
+                            34 New House,<br>
+                            Hatton Garden,<br>
+                            London, EC1N 8JY,<br>
+                            United Kingdom<br>
                             Tel: 020 333 20135
 
                         </h4>
@@ -62,7 +64,7 @@
                         </div>
                     </div>
 
-                <div style="margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
+                <div class="plane-border" style="margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
 
                     <h4 style="color:red;font-weight:bold;text-decoration:underline;">Our General Labour Services</h4>
                     <ul>
@@ -80,7 +82,7 @@
 
                 </div>
 
-                <div style="margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
+                <div class="plane-border" style="margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
 
                     <h4 style="color:red;font-weight:bold;text-decoration:underline;">Also</h4>
                     <ul>
