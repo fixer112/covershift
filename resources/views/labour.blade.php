@@ -57,16 +57,16 @@
                 <div class="row">
                     {{-- <div> --}}
                         <div class="col-6 client" style="">
-                            <img src="{{ asset('/labour1.jpg')}}" alt="security" style="height:50%;">
+                            <img src="{{ asset('/labour1.jpg')}}" alt="security" style="height:50%;width: 80%;">
                         </div>
 
                         <div class="col-6 client" style="">
-                                <img src="{{ asset('/labour2.jpg')}}" alt="security" style="height:50%;">
+                                <img src="{{ asset('/labour2.jpg')}}" alt="security" style="height:50%;width: 80%;">
                         </div>
                     {{-- </div> --}}
                 </div>
 
-                <div class="plane-border" style="margin-top: -20%;margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
+                <div class="plane-border col-8 mx-auto" style="margin-top: -20%;margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
 
                     <h4 style="color:red;font-weight:bold;text-decoration:underline;">Our General Labour Services</h4>
                     <ul>
@@ -84,7 +84,7 @@
 
                 </div>
 
-                <div class="plane-border" style="margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
+                <div class="plane-border col-8 mx-auto" style="margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
 
                     <h4 style="color:red;font-weight:bold;text-decoration:underline;">Also</h4>
                     <ul>
@@ -99,7 +99,7 @@
 
                 </div>
 
-                <div class="client">
+                <div class="col-10 mx-auto">
 
                         <p style="color:blue;font-size:18px;font-weight: bold;">
                             Please fill the short form below and we will get back to you shortly. We take your privacy seriously. No details will be shared.<br>
