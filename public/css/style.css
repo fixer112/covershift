@@ -1,6 +1,6 @@
 body{
     font-family: unset;
-    background-color: white; 
+    background-color: white;
 }
 .menu{
 	/*margin-top: 200px;*/
@@ -220,7 +220,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 @media (max-width:576px){
 .book{
-    width: 100%; 
+    width: 100%;
     font-size: xx-small;
 }
 }
@@ -254,4 +254,7 @@ list-style: none;
     font-size: 17px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+ul{
+    list-style-position: inside;
 }
