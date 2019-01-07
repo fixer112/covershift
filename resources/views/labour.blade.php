@@ -66,7 +66,7 @@
                     {{-- </div> --}}
                 </div>
 
-                <div class="plane-border col-8 mx-auto" style="margin-top: -20%;margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
+                <div class="plane-border col-12 mx-auto" style="margin-top: -20%;margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
 
                     <h4 style="color:red;font-weight:bold;text-decoration:underline;">Our General Labour Services</h4>
                     <ul>
@@ -84,7 +84,7 @@
 
                 </div>
 
-                <div class="plane-border col-8 mx-auto" style="margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
+                <div class="plane-border col-12 mx-auto" style="margin-bottom:30px;font-weight:bold;text-align:center;font-size:17px">
 
                     <h4 style="color:red;font-weight:bold;text-decoration:underline;">Also</h4>
                     <ul>

@@ -61,7 +61,7 @@
                         </div>
                 </div>
 
-                <div class="plane-border col-8 mx-auto" style="margin-bottom:30px;font-weight:bold;font-size:17px;padding-left: 20px;">
+                <div class="plane-border col-12 mx-auto" style="margin-bottom:30px;font-weight:bold;font-size:17px;padding-left: 20px;">
 
                     <h4 style="color:red;font-weight:bold;text-decoration:underline;">Our Event Security & Steward Services:</h4>
                     <ul>
@@ -75,7 +75,7 @@
 
                 </div>
 
-                <div class="plane-border col-8 mx-auto" style="margin-bottom:30px;font-weight:bold;font-size:17px;padding-left: 20px;">
+                <div class="plane-border col-12 mx-auto" style="margin-bottom:30px;font-weight:bold;font-size:17px;padding-left: 20px;">
 
                     <h4 style="color:red;font-weight:bold;text-decoration:underline;">Our Empty or Void Building Security Services offer:</h4>
                     <ul>
