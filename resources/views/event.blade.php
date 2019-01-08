@@ -36,10 +36,12 @@
                         <h2>
                         <h3 style="color:red">CoverShift Services <h3>
                         <h4>
-                            ( www.cover-shift.co.uk)<br>
-                            34 New House, Hatton Garden,<br>
-                            London, EC1N 8JY, United Kingdom<br>
-                            Tel: 020 333 20135
+                                ( www.cover-shift.co.uk)<br>
+                                34 New House,<br>
+                                Hatton Garden,<br>
+                                London, EC1N 8JY,<br>
+                                United Kingdom<br>
+                                Tel: 020 333 20135
 
                         </h4>
 
