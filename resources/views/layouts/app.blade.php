@@ -43,7 +43,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
                 <a class="nav-link" href="{{url('')}}/">Home</a>
             </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/hire')}}">Hire Full Time Staff </a>
+                <a class="nav-link" href="{{url('/event')}}">Event Security & Steward</a>
             </li>
             <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/about')}}">About Us</a>
@@ -51,25 +51,21 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
             <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/contact')}}">Contact </a>
             </li>
-            {{-- <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/security')}}">Security </a>
+
+            <li class="nav-item menu-link">
+                <a class="nav-link" href="{{url('/labour')}}">General Labour Services </a>
             </li>
             <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/security2')}}">Security2 </a>
-            </li> --}}
-            <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/work_for_us')}}">Work For Us </a>
+                <a class="nav-link" href="{{url('/security')}}">Vacant Property Security</a>
             </li>
-           {{--  <li class="nav-item menu-link">
-                <a class="nav-link" href="{{url('/kec')}}">Kitchen Equipment Cleaning</a>
-            </li> --}}
+
             <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/kec')}}">Kitchen Deep Cleaning</a>
             </li>
             {{-- <li class="nav-item menu-link">
                 <a class="nav-link" href="{{url('/kec2')}}">KEC2</a>
             </li> --}}
-            
+
       {{-- <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
     </li> --}}
@@ -99,7 +95,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
                 {{ session('failed') }}
             </div>
             @endif
-            
+
         </div> --}}
 
         @yield('content')
@@ -112,14 +108,14 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
     var home = "{{url('')}}";
     $(document).ready(function() {
       $('li.active').removeClass('active');
-      $('a[href="' + url + location.pathname + '"]').closest('li').addClass('active'); 
+      $('a[href="' + url + location.pathname + '"]').closest('li').addClass('active');
   });
 
 </script>
 @yield('script')
 <div class="row clients">
     <div class="col-12 mx-auto">
-      <h5 style="text-align: center;font-weight: bold;margin-bottom: 20px;margin-top: 20px;">Trusted By</h5>  
+      <h5 style="text-align: center;font-weight: bold;margin-bottom: 20px;margin-top: 20px;">Trusted By</h5>
   </div>
   <div class="col-12">
     <div class="row">
@@ -168,7 +164,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
     <div class="paypal d-sm-none">
         <img src="{{asset('/paypal.jpeg')}}" alt="" class="mx-auto" style="height: 50px;width: 100px">
     </div>
-    
+
     {{-- <div class="feature">
         <span><i class="fa fa-thumbs-up"></i> Less Stress</span>
         <span><i class="fa fa-clock"></i> Save Time</span>
@@ -179,7 +175,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
         <span><a href="{{url('/terms')}}">Terms</a></span>
         <span><a href="{{url('/privacy')}}">Privacy</a></span>
     </div>
-    
+
 </div>
 </body>
 
