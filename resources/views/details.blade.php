@@ -207,6 +207,11 @@ Order Service
 
         </div>
     </div>
+    <div class="alert alert-warning" style="">
+            <p>Thanks for booking a service with CoverShift. You will get a payment invoice shortly and staff
+            will be on your site as booked. Please do email us if you need futher clarifacation.</p>
+            {{-- <p>Regards,<br>Team CoverShift</p> --}}
+    </div>
 
     <div class="form-group">
         <button class="btn btn-success">
