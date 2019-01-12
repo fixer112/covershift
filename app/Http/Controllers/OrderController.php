@@ -43,7 +43,7 @@ class OrderController extends Controller
     }
 
     public function details()
-    {	
+    {
     	if (session('price')) {
     	$service = session('service');
     	$price = session('price');
@@ -68,7 +68,7 @@ class OrderController extends Controller
                 return view('/alert');
                 //return '<a href="'.$url.'">Verify</a>';
             }
-            
+
     	return view('summary',compact('invoice'));
     }
 
@@ -121,8 +121,8 @@ class OrderController extends Controller
     	}
     	//$user = User::where('email', $request->email)->where('email_verified_at', '!=', '')->first();
     	$user = User::where('email', $request->email)->first();
-    	
-    	
+
+
     		if (!$user) {
     		$user =User::create([
     			'fname' => $request->fname,
@@ -144,7 +144,7 @@ class OrderController extends Controller
                 'address' => $request->addr,
     			]);
     		}
-    		
+
     	//}
     		$user_id = $user->id;
 
@@ -183,7 +183,7 @@ class OrderController extends Controller
     	/*$invoice->invoice_id = time().$invoice->id;
     	$invoice->description = "Order for service ".$invoice->title." invoice id # ".$invoice->invoice_id;*/
 
-    	
+
 
 
             //if user does not exist, user verifies email first
@@ -195,7 +195,7 @@ class OrderController extends Controller
     			$subject = 'Confirm Email to continue Order # '.$invoice->invoice_id;
     			$msg = 'Order #'.$invoice->invoice_id.' successfully booked, please click the link below to confirm your email and continue with payment';
     			try {
-    				
+
     			$user->notify(new OrderBooked($user->fname, $subject, $msg,'Confirm Email', $url ));
 
     			} catch (Exception $e) {
@@ -209,19 +209,20 @@ class OrderController extends Controller
 
     		//return redirect('make_payment/'.$invoice->id);
     			$subject = 'Order #'.$invoice->invoice_id;
-    			$msg = 'Order #'.$invoice->invoice_id.' successfully booked, please click the link below to continue with payment';
+                $msg = 'Order #'.$invoice->invoice_id.' successfully booked. We will send you a payment invoice shortly and staff will be on site as booked';
+                // please click the link below to continue with payment'
     			$url = url('summary/'.$invoice->invoice_id);
     			try {
-    				
-    			$user->notify(new OrderBooked($user->fname, $subject, $msg,'Continue Payment', $url ));
+
+    			$user->notify(new OrderBooked($user->fname, $subject, $msg,'View Summary', $url ));
     			} catch (Exception $e) {
     				Log::error($e);
     			}
     			return redirect('summary/'.$invoice->invoice_id);
     		}
-    	
+
     	/*$data = $this->getCart($invoice);
-    	
+
 
     	//give a discount of 10% of the order amount
     	//$data['shipping_discount'] = round((10 / 100) * $total, 2);
@@ -234,7 +235,7 @@ class OrderController extends Controller
 
     public function make_payment(Invoice $invoice, Request $request){
     	$data = $this->getCart($invoice);
-    	
+
     	if ($invoice->paid()) {
     		$request->session()->flash('failed', 'Payment has already been made for this InvoiceID. # '.$invoice->invoice_id);
     	        return redirect('/');
@@ -322,7 +323,7 @@ class OrderController extends Controller
             $msg = 'Order #'.$invoice->invoice_id.' successfully booked, please click the link below to continue with payment';
             $url = url('summary/'.$invoice->invoice_id);
             try {
-                
+
             $user->notify(new OrderBooked($user->fname, $subject, $msg,'Continue Payment', $url ));
             } catch (Exception $e) {
                 Log::error($e);
@@ -331,7 +332,7 @@ class OrderController extends Controller
     				$request->session()->flash('failed', 'Payment has already been made for this InvoiceID. # '.$invoice->invoice_id);
     	        return redirect('/');
     			}else{
-    				
+
     			return redirect('make_payment/'.$invoice->id);
     			//return 'no';
     			}*/
@@ -346,7 +347,11 @@ class OrderController extends Controller
 
     }
 
-    public function reciept(Invoice $invoice){
+    public function reciept(Invoice $invoice, Request $request){
+        if (!$invoice->paid()) {
+            $request->session()->flash('failed', 'InvoiceID. # '.$invoice->invoice_id.' is Unpaid');
+            return view('/alert');
+        }
     	$user = $invoice->user;
     	$name = $user->fname.' '.$user->lname;
     	$company = $user->company_name;
@@ -361,21 +366,21 @@ class OrderController extends Controller
     	 //$this->reciept->setDue(date('M dS ,Y',strtotime('+3 months')));    // Due Date
     	 $this->reciept->setFrom(array("CoverShift","CoverShift","34 New House,67-68 Hatton Garden, London","London, EC1N 8JY UK"));
     	 $this->reciept->setTo(array($invoice->name,$invoice->company_name,"",""));
-    	 
+
     	 $this->reciept->addItem($invoice->title,$invoice->description,1,0,$invoice->price,0,$invoice->price * $invoice->shift_hour);
     	 /*
     	 $this->reciept->addItem("PDC-E5300","2.6GHz/1GB/320GB/SMP-DVD/FDD/VB",4,0,645,0,2580);
     	 $this->reciept->addItem('LG 18.5" WLCD',"",10,0,230,0,2300);
     	 $this->reciept->addItem("HP LaserJet 5200","",1,0,1100,0,1100);
-    	 
+
     	 $this->reciept->addTotal("Total",$invoice->total);
     	 /*$this->reciept->addTotal("VAT 21%",1986.6);
     	 $this->reciept->addTotal("Total due",11446.6,true);*/
-    	 
+
     	 $this->reciept->addBadge("Paid");
-    	 
+
     	 $this->reciept->addTitle("Summary");
-    	 
+
     	 $this->reciept->addParagraph("Service : ".$invoice->title);
 
     	 $this->reciept->addParagraph(" Price/Hour: ".$invoice->price);
@@ -405,17 +410,17 @@ class OrderController extends Controller
          $this->reciept->setFooternote("Team CoverShift");
 
     	 /*if ($type == 'F') {
-    	 	
-    	 $this->reciept->render(public_path('/reciept/'.$invoice->invoice_id.'.pdf'),$type); 
+
+    	 $this->reciept->render(public_path('/reciept/'.$invoice->invoice_id.'.pdf'),$type);
 
     	 }else{
-    	 	$this->reciept->render($invoice->invoice_id.'.pdf',$type); 
+    	 	$this->reciept->render($invoice->invoice_id.'.pdf',$type);
     	 }*/
 
     	 $this->reciept->render(public_path('/reciept/'.$invoice->invoice_id.'.pdf'),'F');
     	 //$this->reciept->render($invoice->invoice_id.'.pdf',$type);
          //return redirect('download/'.$invoice->invoice_id);
-    	 
+
     }
 
     public function work(Request $request){
@@ -473,5 +478,5 @@ class OrderController extends Controller
     }
 
 
-    
+
 }

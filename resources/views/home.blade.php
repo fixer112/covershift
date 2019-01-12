@@ -17,13 +17,13 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
     <div class="half">
         <div class="work">
             <h3 class="half-head" style="color: red">Welcome to Booking Service Page</h3>
-        
+
 
             <div class="half-sub bord" style="margin-top: 20px;text-align: left">
                 <ul style="    padding-top: 20px;">
                     <li style="margin-bottom: 10px">Welcome to CoverShift -  an on-demand staffing system that provides flexible Office Labour Staff & Event Mgmt Support to London  businesses in a simplified process. We are based in London's central business district of Hatton Garden, EC1N.</li>
 
-                    <li style="margin-bottom: 10px">Our website allows you to book and process any Service automatically, thereby saving time, however, if that is not comfortable, you can send us an email with your request. We can also serve you on Contract basis or Price Work.</li>
+                    <li style="margin-bottom: 10px">Our website allows you to book and process any Service automatically (You will get a Payment Invoice after booking), thereby saving time, however, if that is not comfortable, you can send us an email with your request. We can also serve you on Contract basis or Price Work.</li>
 
                     <li style="margin-bottom: 10px">We provide London offices with flexible Office Labour Staff, Event Security staff, Event Stewards & Help with Manual Handling Tasks. We also provide security for vacant properties.</li>
 
@@ -34,18 +34,18 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
             </div>
            <div class="half-sub" style="margin-top: 30px;color:blue">
                 <ul>
-                    <li>Please click on a service and continue</li>
+                    <li>Please click on a service and continue. You will get a Payment invoice at the end</li>
                     <li>If you are not ok with booking online;</li>
                     <li>Or would rather discuss your request before booking;</li>
                     <li>Or the request is a bit ongoing, please send a mail to: covershiftservices@cover-shift.co.uk. We will contact you immediately</li>
                 </ul>
-               
+
             </div>
             <form v-on:keydown.enter.prevent.self :action="book_staff" method="get" accept-charset="utf-8">
                 {{ csrf_field() }}
                 <div class="form-group services row">
                     <div class="info col-6 mx-auto">
-                        <input ref="1" type="checkbox" name="service" class="check" value="Labour-Staff_Office-Porter" @click="check(1,'13.50')"> <span class="service"><strong>Labour Staff/Office Porter</strong> <p>(Load & Unload goods, Documents sorting & Storage, Adhoc labourer, Store Clearance & Removals, Office dismantling etc)</p></span> 
+                        <input ref="1" type="checkbox" name="service" class="check" value="Labour-Staff_Office-Porter" @click="check(1,'13.50')"> <span class="service"><strong>Labour Staff/Office Porter</strong> <p>(Load & Unload goods, Documents sorting & Storage, Adhoc labourer, Store Clearance & Removals, Office dismantling etc)</p></span>
                     </div>
 
                     {{-- <div class="price col-6"><span>£13.50/hr</span></div> --}}
@@ -61,7 +61,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
 
                 <div class="form-group services row">
                     <div class="info col-6 mx-auto">
-                        <input ref="3" type="checkbox" name="service" class="check" value="Helping-Hands" @click="check(3,'13.00')"> <span class="service"><strong>Helping Hands</strong><p>(Load & Unload goods,Ad hoc Labourers, Errand & Odd jobs)</p></span> 
+                        <input ref="3" type="checkbox" name="service" class="check" value="Helping-Hands" @click="check(3,'13.00')"> <span class="service"><strong>Helping Hands</strong><p>(Load & Unload goods,Ad hoc Labourers, Errand & Odd jobs)</p></span>
                     </div>
 
                     {{-- <div class="price col-6"><span>£13.00/hr</span></div> --}}
@@ -85,7 +85,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
 
                 <div class="form-group services row">
                     <div class="info col-6 mx-auto">
-                        <input ref="6" type="checkbox" name="service" class="check" value="Event-Assistant" @click="check(6,'13.00')"> <span class="service"><strong>Event Assistant</strong> <p>(Event Steward)</p></span> 
+                        <input ref="6" type="checkbox" name="service" class="check" value="Event-Assistant" @click="check(6,'13.00')"> <span class="service"><strong>Event Assistant</strong> <p>(Event Steward)</p></span>
                     </div>
 
                     {{-- <div class="price col-6"><span>£13.00/hr</span></div> --}}
@@ -93,7 +93,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
 
                 <div class="form-group services row">
                     <div class="info col-6 mx-auto">
-                        <input ref="7" type="checkbox" name="service" class="check" value="Kitchen-Porter" @click="check(7,'12.50')"> <span class="service"><strong>Kitchen Porter</strong></span> 
+                        <input ref="7" type="checkbox" name="service" class="check" value="Kitchen-Porter" @click="check(7,'12.50')"> <span class="service"><strong>Kitchen Porter</strong></span>
                     </div>
 
                     {{-- <div class="price col-6"><span>£12.50/hr</span></div> --}}
@@ -101,7 +101,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
 
                 <div class="form-group services row">
                     <div class="info col-6 mx-auto">
-                        <input ref="8" type="checkbox" name="service" class="check" value="Kitchen-Assistant" @click="check(8,'12.50')"> <span class="service"><strong>Kitchen Assistant</strong></span> 
+                        <input ref="8" type="checkbox" name="service" class="check" value="Kitchen-Assistant" @click="check(8,'12.50')"> <span class="service"><strong>Kitchen Assistant</strong></span>
                     </div>
 
                     {{-- <div class="price col-6"><span class="price">£12.50/hr</span></div> --}}
@@ -115,7 +115,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
             </form>
         </div>
     </div>
-   
+
 {{-- </div> --}}
 
 </div>

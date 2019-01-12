@@ -51,8 +51,8 @@
               <a class="header-brand" href="{{url('/admin')}}">
                 <img src="{{ asset('/logo.jpg')}}" class="header-brand-img" alt="tabler logo">
               </a>
-              
-                
+
+
                 <div class="dropdown">
                   <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                     {{-- <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span> --}}
@@ -62,7 +62,7 @@
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    
+
                     <a class="dropdown-item" href="{{url('/logout')}}">
                       <i class="dropdown-icon fe fe-log-out"></i> Sign out
                     </a>
@@ -91,7 +91,7 @@
                   <li class="nav-item">
                     <a href="./index.html" class="nav-link active"><i class="fe fe-home"></i> Home</a>
                   </li>
-                  
+
                   {{-- <li class="nav-item dropdown">
                     <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Components</a>
                     <div class="dropdown-menu dropdown-menu-arrow">
@@ -187,10 +187,26 @@
                   </div>
                 </div>
               </div> --}}
-              
+
             <div class="row row-cards row-deck">
-              
+
               <div class="col-12">
+
+                            @if (session('success'))
+                            <div class="alert alert-success  mx-auto">
+                                {{ session('success') }}
+                                @if(session('download'))
+                                <strong><a href="{{session('download')}}">Download Reciept</a></strong>
+                                @endif
+                            </div>
+                            @endif
+
+                            @if (session('failed'))
+                            <div class="alert alert-danger  mx-auto">
+                                {{ session('failed') }}
+                            </div>
+                            @endif
+
                 <div class="card">
                   <div class="card-header">
                     <h3 class="card-title">Paid Invoices</h3>
@@ -217,6 +233,7 @@
                           <th>Number</th>
                           <th>Company Name</th>
                           <th>Work Address</th>
+                          <th>Actions</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -241,6 +258,11 @@
                           <td>{{$paid->mobile}}</td>
                             <td>{{$paid->company_name}}</td>
                             <td>{{$paid->address}}</td>
+                            <td>
+                                    <a href="{{url('/mark_unpaid/'.$paid->id)}}"><button class="btn btn-danger">
+                                        Mark As UnPaid
+                                    </button></a>
+                                </td>
                         </tr>
                           @endforeach
                           {{-- <tr>
@@ -271,7 +293,7 @@
                             </a>
                           </td>
                         </tr> --}}
-                        
+
                       </tbody>
                     </table>
                   </div>
@@ -305,6 +327,7 @@
                           <th>Number</th>
                           <th>Company Name</th>
                           <th>Work Address</th>
+                          <th>Actions</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -329,10 +352,15 @@
                           <td>{{$unpaid->mobile}}</td>
                           <td>{{$unpaid->company_name}}</td>
                           <td>{{$unpaid->address}}</td>
+                        <td>
+                            <a href="{{url('/mark_paid/'.$unpaid->id)}}"><button class="btn btn-success">
+                                Mark As Paid
+                            </button></a>
+                        </td>
                         </tr>
                           @endforeach
-                          
-                        
+
+
                       </tbody>
                     </table>
                   </div>

@@ -44,4 +44,24 @@ class AdminController extends Controller
     	$users = User::all();
     	return view('admin.home',compact('invoices','paids','unpaids','users'));
     }
+
+    public function mark_paid(Invoice $unpaid, Request $request){
+        if ($unpaid->paid()) {
+            $request->session()->flash('failed', 'InvoiceID. # '.$unpaid->invoice_id.' already marked Paid');
+    	    return back();
+        }
+        $unpaid->update(["payment_status" => "Paid"]);
+        $request->session()->flash('success', 'InvoiceID. # '.$unpaid->invoice_id.' marked Paid');
+    	return back();
+    }
+
+    public function mark_unpaid(Invoice $paid, Request $request){
+        if (!$paid->paid()) {
+            $request->session()->flash('failed', 'InvoiceID. # '.$paid->invoice_id.' already marked UnPaid');
+    	    return back();
+        }
+        $paid->update(["payment_status" => "Invalid"]);
+        $request->session()->flash('success', 'InvoiceID. # '.$paid->invoice_id.' marked Paid');
+    	return back();
+    }
 }

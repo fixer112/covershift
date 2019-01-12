@@ -18,7 +18,7 @@ Order Service
         </div>
         @endif
     </div>
-    
+
     <form action="{{url('/payment')}}" method="post" accept-charset="utf-8">
         {{ csrf_field() }}
         <div class="form-group{{ $errors->has('fname') ? ' has-error' : '' }}">
@@ -71,7 +71,7 @@ Order Service
 
 
         <div style="font-size: 12px; font-weight: bold; padding: 20px;color:green">
-          All bookings are processed automatically onliine, saving both time and costs for all.  
+          All bookings are processed automatically onliine, saving both time and costs for all.
       </div>
 
 
@@ -81,7 +81,7 @@ Order Service
 
             <input class="time" type="time" v-model="from" required>
 
-            
+
             <input class="time" type="time" v-model="to" required>
             <input type="hidden" :value="to_time" name="to">
             <input type="hidden" :value="from_time" name="from">
@@ -193,7 +193,7 @@ Order Service
         <div class="alert alert-success col-12 mx-auto">
             <div style="text-align: center;">
                 <h2>Summary</h2> <br> <span style="font-size: 10px;font-weight: bold" v-if="from && to">From @{{from_time}} To @{{to_time}}</span>
-            </div> 
+            </div>
             <div class="summary">
                 <p><span class="name">Service</span> <span class="value">{{str_replace('-', ' ', str_replace('_', '/', $service))}}</span></p>
                 <p><span class="name">Price per hour</span> <span class="value">£{{$price}}</span></p>
@@ -207,7 +207,7 @@ Order Service
 
         </div>
     </div>
-    
+
     <div class="form-group">
         <button class="btn btn-success">
             Continue
@@ -292,7 +292,7 @@ Order Service
                 h = parseInt(h);
                 m = n[3]+n[4];
                 if (h<13) {
-                    this.from_time = h.toString()+":"+m+" AM";  
+                    this.from_time = h.toString()+":"+m+" AM";
                 }else{
                    h = h-12;
                    this.from_time = h.toString()+":"+m+" PM";
@@ -305,7 +305,7 @@ Order Service
         h = parseInt(h);
         m = n[3]+n[4];
         if (h<13) {
-            this.to_time = h.toString()+":"+m+" AM";  
+            this.to_time = h.toString()+":"+m+" AM";
         }else{
            h = h-12;
            this.to_time = h.toString()+":"+m+" PM";
@@ -318,7 +318,7 @@ Order Service
             this.h = hours/60;
             this.m = hours%60;
             if (hours > this.hours) {
-                
+
             }
         }*/
     },

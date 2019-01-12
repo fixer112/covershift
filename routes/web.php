@@ -91,5 +91,7 @@ Route::get('/admin', 'AdminController@admin')->name('admin');
 Route::get('/admin-login', 'AdminController@login_get')->name('login');
 Route::post('/admin-login', 'AdminController@login_post')->name('login_post');
 Route::post('/work', 'OrderController@work')->name('work');
+Route::get('/mark_paid/{unpaid}', 'AdminController@mark_paid')->name('paid');
+Route::get('/mark_unpaid/{paid}', 'AdminController@mark_unpaid')->name('unpaid');
 
 //Route::get('/home', 'HomeController@index')->name('home');
