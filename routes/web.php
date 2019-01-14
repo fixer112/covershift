@@ -68,6 +68,9 @@ Route::get('/labour', function () {
 Route::get('/event', function () {
     return view('event');
 });
+Route::get('/confirm-email', function () {
+    return view('confirm');
+});
 
 Route::get('/download/{invoice}', function ($invoice) {
 	return response()->file(public_path('/reciept/'.$invoice.'.pdf'));

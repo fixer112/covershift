@@ -64,8 +64,8 @@ class OrderController extends Controller
                 $user->update(['verify' => str_random(60)]);
                 $url = url('/verify/'.$user->verify.'/?invoice='.$invoice->id);
                 //return redirect('/verify/'.$user->verify.'/'.$invoice->id);
-                $request->session()->flash('failed', 'Please Confirm your email by clicking on the link sent to your email ('.$user->email.') and complete transaction');
-                return view('/alert');
+                $request->session()->flash('id', $invoice->invoice_id);
+                return redirect('/confirm-email');
                 //return '<a href="'.$url.'">Verify</a>';
             }
 
@@ -193,7 +193,7 @@ class OrderController extends Controller
     			//return redirect('/verify/'.$user->verify.'/'.$invoice->id);
 
     			$subject = 'Confirm Email to continue Order # '.$invoice->invoice_id;
-    			$msg = 'Order #'.$invoice->invoice_id.' successfully booked, please click the link below to confirm your email and continue with payment';
+    			$msg = 'Order #'.$invoice->invoice_id.' successfully booked, please click the link below to confirm your email. We will send the payment invoice shortly';
     			try {
 
     			$user->notify(new OrderBooked($user->fname, $subject, $msg,'Confirm Email', $url ));
@@ -324,7 +324,7 @@ class OrderController extends Controller
             $url = url('summary/'.$invoice->invoice_id);
             try {
 
-            $user->notify(new OrderBooked($user->fname, $subject, $msg,'Continue Payment', $url ));
+            $user->notify(new OrderBooked($user->fname, $subject, $msg,'View Summary', $url ));
             } catch (Exception $e) {
                 Log::error($e);
             }

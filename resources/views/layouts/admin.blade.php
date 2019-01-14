@@ -230,6 +230,7 @@
                           <th>Summary</th>
                           <th>Name</th>
                           <th>Email</th>
+                          <th>Email Verify</th>
                           <th>Number</th>
                           <th>Company Name</th>
                           <th>Work Address</th>
@@ -255,6 +256,7 @@
                           <td>{{$paid->summary}}</td>
                           <td>{{$paid->name}}</td>
                           <td>{{$user->email}}</td>
+                          <td>{{$user->email_verified_at? 'YES':'NO'}}</td>
                           <td>{{$paid->mobile}}</td>
                             <td>{{$paid->company_name}}</td>
                             <td>{{$paid->address}}</td>
@@ -324,6 +326,7 @@
                           <th>Summary</th>
                           <th>Name</th>
                           <th>Email</th>
+                          <th>Email Verify</th>
                           <th>Number</th>
                           <th>Company Name</th>
                           <th>Work Address</th>
@@ -349,6 +352,7 @@
                           <td>{{$unpaid->summary}}</td>
                           <td>{{$unpaid->name}}</td>
                           <td>{{$user->email}}</td>
+                          <td>{{$user->email_verified_at? 'YES':'NO'}}</td>
                           <td>{{$unpaid->mobile}}</td>
                           <td>{{$unpaid->company_name}}</td>
                           <td>{{$unpaid->address}}</td>

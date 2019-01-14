@@ -51,8 +51,8 @@ Summary for #{{$invoice->invoice_id}}
             </button></a> --}}
             <div class="alert alert-warning" style="">
                 {{-- <p><center><strong>If you have an update or correction for this order or would rather pay through an invoice, please send us a <a href="mailto:helpinghands@cover-shift.co.uk"> mail</a>. Thank you.</strong></center></p> --}}
-                <p>Thanks for booking a service with CoverShift. You will get a payment invoice shortly and staff
-                will be on your site as booked. Please do email us if you need futher clarifacation.</p>
+                <p>Thanks for booking a service with CoverShift. Please check your email. You will get a payment invoice shortly and staff
+                will be on your site as booked. Please do email us if you need futher clarification.</p>
                 <p>Regards,<br>Team CoverShift</p>
             </div>
             @endif
