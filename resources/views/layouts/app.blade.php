@@ -17,7 +17,19 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
     {{-- <script src="/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script> --}}
     <script src="{{ asset('/js/app.js')}}" type="text/javascript" charset="utf-8"></script>
     <script src="{{ asset('/js/vue.js')}}" type="text/javascript" charset="utf-8"></script>
+    <style>
+    #spam {
+    display: none;
+}
+</style>
+<script>
+    $(document).ready(function(){
+        $('#spam').hide();
+    });
+</script>
+
     @yield('head')
+
 
     <title>CoverShift | @yield('title')</title>
 

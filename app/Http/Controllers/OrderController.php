@@ -112,13 +112,22 @@ class OrderController extends Controller
 		            'shift_hour' => 'required',
 		            'summary' => 'required',
 		            'total' => 'required',
+                    'spam' => 'required',
 
     		]);
+
+        if ($request->spam) {
+
+            $request->session()->flash('failed', 'Please refill the form, you are likely a spam bot');
+            return back();
+        }
+
     	$request->session()->forget('price');
     	$request->session()->forget('service');
     	if (!$request->price) {
     		return redirect('/');
     	}
+        
     	//$user = User::where('email', $request->email)->where('email_verified_at', '!=', '')->first();
     	$user = User::where('email', $request->email)->first();
 
@@ -436,6 +445,12 @@ class OrderController extends Controller
                     'accept' => 'required|accepted',
                      ]);
 
+        if ($request->spam) {
+
+            $request->session()->flash('failed', 'Please refill the form, you are likely a spam bot');
+            return redirect('/alert');
+        }
+
         //$reply = $request->email;
         //$name =  $request->fname.' '.$request->lname;
         $content = 'First Name : '.$request->fname.
@@ -460,6 +475,12 @@ class OrderController extends Controller
                     'number' => 'nullable|numeric',
                     'req' => 'required|max:500',
                      ]);
+
+        if ($request->spam) {
+
+            $request->session()->flash('failed', 'Please refill the form, you are likely a spam bot');
+            return redirect('/alert');
+        }
 
             $num = $request->number ? $request->number : 'None';
             $message = $request->msg;

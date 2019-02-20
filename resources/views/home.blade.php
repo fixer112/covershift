@@ -14,6 +14,12 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
 <div class="col-12 mx-auto">
     {{-- <div class="col-6 mx-auto"> --}}
 
+     @if (session('failed'))
+            <div class="alert alert-danger  mx-auto">
+                {{ session('failed') }}
+            </div>
+        @endif
+
     <div class="half">
         <div class="work">
             <h3 class="half-head" style="color: red">Welcome to Booking Service Page</h3>

@@ -4,6 +4,10 @@
 Order Service
 @endsection
 
+@section('head')
+
+@endsection
+
 @section('content')
 <div class="col-12">
     <div class="row">
@@ -16,6 +20,12 @@ Order Service
                 @endforeach
             </ul>
         </div>
+        @endif
+
+        @if (session('failed'))
+            <div class="alert alert-danger  mx-auto">
+                {{ session('failed') }}
+            </div>
         @endif
     </div>
 
@@ -182,6 +192,10 @@ Order Service
     <div class="form-group">
         <label class="control-label">Please summarise duties expected of staff or any instructions</label>
         <textarea class="form-control" name="summary" v-model="summary" required></textarea>
+    </div>
+
+    <div class="form-group" id="spam">
+        <input type="text" name="spam" value="">
     </div>
 
 

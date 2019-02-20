@@ -99,6 +99,10 @@ Hire our temporary Kitchen Porters and Kitchen Assistants
                     </div>
                 </div>
 
+                <div class="form-group" id="spam">
+                    <input type="text" name="spam" value="">
+                </div>
+
                 <div class="form-group{{ $errors->has('accept') ? ' has-error' : '' }}">
 
                     <div class="input">
