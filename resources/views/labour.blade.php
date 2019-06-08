@@ -33,22 +33,22 @@
                 <div style="margin-bottom:30px;text-align:center">
 
                     <h2 style="color:blue">Thanks for visiting our<br>
-                        Flexible Office/Event Porter Services + General Labour Services.
+                        Flexible Office/Event Porter Services + General Labour.
                         <br>
                         Please book a service <a href="/"><u>here</u></a> or send an email to:
                         covershiftservices@cover-shift.co.uk<br>
-                        <span style="color:black">@</span>
-                        <h2>
-                            <h3 style="color:red">CoverShift Services <h3>
-                                    <h4>
-                                        ( www.cover-shift.co.uk)<br>
-                                        34 New House,<br>
-                                        Hatton Garden,<br>
-                                        London, EC1N 8JY,<br>
-                                        United Kingdom<br>
-                                        Tel: 020 333 20135
+                        {{--  <span style="color:black">@</span>  --}}
+                    </h2>
+                    {{--  <h3 style="color:red">CoverShift Services <h3>  --}}
+                    <h4>
+                        {{--   ( www.cover-shift.co.uk)<br>  --}}
+                        34 New House,<br>
+                        Hatton Garden,<br>
+                        London, EC1N 8JY,<br>
+                        United Kingdom<br><br>
+                        Tel: 020 333 20135
 
-                                    </h4>
+                    </h4>
 
                 </div>
                 <div style="margin-bottom:30px">
@@ -111,7 +111,7 @@
                 <div class="col-10 mx-auto">
 
                     <p style="color:blue;font-size:18px;font-weight: bold;">
-                        Please book a service here or send an email to
+                        Please book a service <a href="/"><u>here</u></a> send an email to
                         covershiftservices@cover-shift.co.uk.
                         <br>
                         In the alternative, please fill the short form below and we will get back to you shortly.

@@ -55,9 +55,12 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
                 <ul>
                     <li>Please click on a service and continue. </li>
                     <li> You will get a Payment invoice at the end</li>
-                    <li>If you are not ok with booking online;</li>
-                    <li>Or would rather discuss your request before booking please send an email to:
-                        covershiftservices@cover-shift.co.uk. We will contact you immediately</li>
+                    <li>If you would rather discuss your request before booking please send an email to:
+                        covershiftservices@cover-shift.co.uk.
+                        <br>We will contact you immediately.</li>
+                    {{--  <li>If you are not ok with booking online;</li>  --}}
+                    {{--  <li>Or would rather discuss your request before booking please send an email to:
+                        covershiftservices@cover-shift.co.uk. We will contact you immediately</li>  --}}
                     {{--  <li>Or the request is a bit ongoing, please send a mail to: covershiftservices@cover-shift.co.uk. We
                         will contact you immediately</li>  --}}
                 </ul>
@@ -152,7 +155,8 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
                         <input ref="3" type="checkbox" name="service" class="check" value="Event-Security"
                             @click="check(3,'14.00')">
                         <span class="service"><strong>Event Security</strong>
-                            <p></p>
+                            <p>(Events, Door Supervisor, Deterrent, Buildings, House Party, Wedding, Close Protection)
+                            </p>
                         </span>
                     </div>
                 </div>
