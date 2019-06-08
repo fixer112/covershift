@@ -22,7 +22,7 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
 
     <div class="half">
         <div class="work">
-            <h3 class="half-head" style="color: red">Welcome to Booking Service Page</h3>
+            <h3 class="half-head" style="color: red">Welcome to <br> Booking Service Page</h3>
 
 
             <div class="half-sub bord" style="margin-top: 20px;text-align: left">

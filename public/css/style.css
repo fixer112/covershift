@@ -50,7 +50,7 @@ header li a:hover, footer li a:hover {
 .half-head {
     font-weight: bolder;
     color: blue;
-    font-size: initial;
+    /* font-size: initial; */
     text-align: center;
 }
 
@@ -76,7 +76,7 @@ header li a:hover, footer li a:hover {
 }
 
 span.service {
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 
 span.price {
