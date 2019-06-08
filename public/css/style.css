@@ -1,13 +1,15 @@
-body{
+body {
     font-family: unset;
     background-color: white;
 }
-.menu{
-	/*margin-top: 200px;*/
-	background-color: #090935;
-	color:white;
-	padding: 0px;
+
+.menu {
+    /*margin-top: 200px;*/
+    background-color: #090935;
+    color: white;
+    padding: 0px;
 }
+
 /*header img{
 	height: 200px;
 
@@ -45,33 +47,38 @@ header li a:hover, footer li a:hover {
     font-weight: bold;
 }*/
 
-.half-head{
+.half-head {
     font-weight: bolder;
     color: blue;
     font-size: initial;
     text-align: center;
 }
-.half-sub{
-	font-size: 14px;
+
+.half-sub {
+    font-size: 16px;
     text-align: center;
     list-style-position: inside;
 
 }
+
 .container {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
 .half {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
     border-style: solid;
     border-width: 2px;
     border-color: #3333;
     border-radius: 5px;
     padding: 20px;
 }
+
 span.service {
     font-size: 16px;
 }
+
 span.price {
     float: right;
     font-size: 13px;
@@ -83,6 +90,7 @@ span.price {
     color: green;
     /*margin-right: 90px;*/
 }
+
 .price span {
     float: right;
     font-size: 13px;
@@ -94,27 +102,34 @@ span.price {
     color: green;
     /*margin-right: 90px;*/
 }
-.has-error{
-	color: red;
+
+.has-error {
+    color: red;
 }
+
 label.control-label {
     font-weight: bold;
 }
+
 .work {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .form-group.services {
     margin-bottom: 50px;
 }
+
 .copyright {
     text-align: center;
 }
-.footer{
-	background-color: #090935;
-	color:white;
-	padding: 25px;
+
+.footer {
+    background-color: #090935;
+    color: white;
+    padding: 25px;
 }
+
 .feature {
     text-align: center;
     padding: 25px;
@@ -122,20 +137,25 @@ label.control-label {
     font-weight: bold;
     font-size: small;
 }
+
 .feature span {
     padding: 25px;
     text-align: center;
 }
+
 .terms {
     text-align: center;
 }
+
 .terms span {
     padding: 25px;
     text-align: center;
 }
+
 .info {
     /*float: left;*/
 }
+
 .dates {
     padding: 11px;
     background-color: #e9ecef;
@@ -143,51 +163,59 @@ label.control-label {
     border-radius: 5px;
 
 }
+
 .d {
     display: inline-block;
     margin-top: 20px;
 }
+
 .nav-item.active {
 
     font-weight: bold;
 
 }
+
 .name {
 
     font-size: 13px;
     font-weight: 600;
 
 }
+
 .name.total {
 
     font-size: x-large;
 
 }
+
 .value {
     font-weight: 600;
     float: right;
 }
+
 .value.total {
 
     font-size: xx-large;
 
 }
-.menu-link{
+
+.menu-link {
     font-weight: bold;
 }
-@media (min-width:992px){
+
+@media (min-width:992px) {
     .menu-link {
-   margin-left: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+        margin-left: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
 
 
-}
+    }
 }
 
 .client img {
-   /* height: 150px;*/
+    /* height: 150px;*/
     /*width: 200px;*/
     height: 100%;
     width: 100%;
@@ -199,35 +227,44 @@ label.control-label {
     border-color: #3333;
     border-radius: 5px;
 }
-.client{
+
+.client {
     margin-bottom: 30px;
 }
-.clients{
+
+.clients {
     /*background-color:#090935e6;*/
 }
+
 .title {
     text-align: center;
     font-weight: bold;
 
 }
+
 .sub-title {
     font-weight: bold;
 
 }
-input[type="checkbox"], input[type="radio"] {
+
+input[type="checkbox"],
+input[type="radio"] {
     outline: 2px solid green;
 
 }
-@media (max-width:576px){
-.book{
-    width: 100%;
-    font-size: xx-small;
+
+@media (max-width:576px) {
+    .book {
+        width: 100%;
+        font-size: xx-small;
+    }
 }
-}
-.paypal img{
+
+.paypal img {
     display: block;
 }
-.bord{
+
+.bord {
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
@@ -243,10 +280,11 @@ input[type="checkbox"], input[type="radio"] {
     margin-right: 1em;
 }
 
-.bord li{
-list-style: none;
+.bord li {
+    list-style: none;
 }
-.plane-border{
+
+.plane-border {
     border-style: solid;
     border-width: 2px;
     border-color: #333333bf;
@@ -257,6 +295,7 @@ list-style: none;
     width: fit-content;
     width: -moz-fit-content;
 }
-ul{
+
+ul {
     list-style-position: inside;
 }

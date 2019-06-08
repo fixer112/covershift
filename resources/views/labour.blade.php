@@ -111,7 +111,7 @@
                 <div class="col-10 mx-auto">
 
                     <p style="color:blue;font-size:18px;font-weight: bold;">
-                        Please book a service <a href="/"><u>here</u></a> send an email to
+                        Please book a service <a href="/"><u>here</u></a> or send an email to
                         covershiftservices@cover-shift.co.uk.
                         <br>
                         In the alternative, please fill the short form below and we will get back to you shortly.
