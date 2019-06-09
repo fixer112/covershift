@@ -121,7 +121,7 @@ class OrderController extends Controller
             'shift_hour' => 'required',
             'summary' => 'required',
             'total' => 'required',
-            'spam' => 'required',
+            //'spam' => 'required',
 
         ]);
 

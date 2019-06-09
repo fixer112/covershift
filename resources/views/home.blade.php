@@ -33,11 +33,11 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
                         business district of Hatton
                         Garden, EC1N.</li>
 
-                    <li style="margin-bottom: 10px">This page allows you to book and process any Service automatically
+                    {{--  <li style="margin-bottom: 10px">This page allows you to book and process any Service automatically
                         (You will get a payment Invoice after booking),
                         thereby saving time.
                         In the alternative you can send us an email with your request:
-                        covershiftservices@cover-shift.co.uk</li>
+                        covershiftservices@cover-shift.co.uk</li>  --}}
 
                     {{--  <li style="margin-bottom: 10px">We provide London offices with flexible Office Labour Staff, Event
                         Security staff, Event Stewards & Help with Manual Handling Tasks. We also provide security for
@@ -53,16 +53,25 @@ London's best Office Helping Hands: Load & Unload goods, Ad hoc & Manual Tasks
             </div>
             <div class="half-sub" style="margin-top: 30px;color:blue">
                 <ul>
-                    <li>Please click on a service and continue. </li>
+                    {{--  <li>Please click on a service and continue. </li>
                     <li> You will get a Payment invoice at the end</li>
                     <li>If you would rather discuss your request before booking please send an email to:
                         covershiftservices@cover-shift.co.uk.
-                        <br>We will contact you immediately.</li>
+                        <br>We will contact you immediately.</li>  --}}
                     {{--  <li>If you are not ok with booking online;</li>  --}}
                     {{--  <li>Or would rather discuss your request before booking please send an email to:
                         covershiftservices@cover-shift.co.uk. We will contact you immediately</li>  --}}
                     {{--  <li>Or the request is a bit ongoing, please send a mail to: covershiftservices@cover-shift.co.uk. We
                         will contact you immediately</li>  --}}
+                    <li>This page allows you to process any service automatically. Please click on a service and
+                        continue.</li>
+
+                    <li>You will get a payment invoice at the end.</li>
+
+                    <li>If you would rather discuss your request before booking please send an email to:
+                        covershiftservices@cover-shift.co.uk. </li>
+
+                    <li>We will contact you immediately.</li>
                 </ul>
 
             </div>
