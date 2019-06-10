@@ -42,7 +42,7 @@ Developed by Altechtic Solutions | altechtic.com.ng | +2348106813749
 <body>
     <header id="header" class="">
         <div>
-            <img src="{{asset('/Covershift.jpg')}}" alt="" width="100%" height="100%" ref="header">
+            <img src="{{asset('/Covershift.png')}}" alt="" width="100%" height="100%" ref="header">
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
